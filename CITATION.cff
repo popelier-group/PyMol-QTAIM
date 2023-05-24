@@ -7,6 +7,6 @@ authors:
 - family-names: "Burn J."
   given-names: "Matthew"
 title: "PyMol-QTAIM visualiser"
-version: 0.1
+version: 0.1-beta
 date-released: 2023-05-24
 url: "https://github.com/popelier-group/PyMol-QTAIM"
