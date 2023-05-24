@@ -1,0 +1,53 @@
+ AIMExt (Version 19.10.12, Standard)
+ Portions Copyright (c) 1997-2019 by Todd A. Keith
+ AIMExt is a component of the AIMAll package ( http://aim.tkgristmill.com )
+
+ TP:  64-bit Windows
+
+ AIMExt is a heavily modified and extended version of the EXTREME program
+ developed by members of R.F.W. Bader's research group
+
+ Much of the Quantum Theory of Atoms in Molecules (QTAIM) is described in the book:
+   "Atoms in Molecules - A Quantum Theory"
+   R.F.W. Bader, Oxford University Press, Oxford, 1990
+
+ For additional references see:  http://aim.tkgristmill.com/references.html
+
+ Wfn File:  Z:\Dropbox (The University of Manchester)\ICHOR Paper\v1\Data\water\water_min.wfn
+ ExtOut File:  Z:\Dropbox (The University of Manchester)\ICHOR Paper\v1\Data\water\water_min.extout
+ Mgp File:  Z:\Dropbox (The University of Manchester)\ICHOR Paper\v1\Data\water\water_min.mgp
+
+ Wfn Title:   WATER0001                                                                     
+ Job Title:  Atomic basin GradRho paths                                                     
+
+ The nuclear coordinates:
+      O1           -2.3227548000E-01 -2.8903997000E-01  1.4793881100E+00
+      H2            1.3541450800E+00 -6.9848156000E-01  6.7524262000E-01
+      H3           -8.4241746000E-01  1.2210774600E+00  6.5580366000E-01
+      O4            3.4922473000E-01  4.3186716000E-01  6.8584246000E+00
+      H5           -6.9184509000E-01 -7.5237161000E-01  7.7712198100E+00
+      H6            6.3170120000E-02  8.6946640000E-02  5.0744848500E+00
+
+ Number of primitives read from wavefunction =     92
+ Number of unique primitives to be used =     92
+
+ Using MO basis.
+
+ Number of processors used for this job =    1
+
+ Total memory allocated for AIMExt =       12.738 Megabytes
+ 
+Model:  Restricted SCF
+ 
+ Restricted, closed-shell, single-determinant wavefunction.
+   Number of electrons (from MO Occs)                   =          20.0000000000
+   Number of Alpha electrons (from MO Occs)             =          10.0000000000
+   Number of Beta electrons (from MO Occs)              =          10.0000000000
+   Number of electron pairs (N*(N-1)/2)                 =         190.0000000000
+   Number of electron pairs (from Muller 2EDM)          =         190.0000000000
+
+ Analyzing Rho, the electron density
+
+ Total memory allocated for AIMExt =       12.738 Megabytes
+
+ Total time = 24 sec (NProc = 1)                                                                                   

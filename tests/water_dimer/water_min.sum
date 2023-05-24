@@ -1,0 +1,1359 @@
+AIMSum (Version 19.10.12, Standard)
+Copyright (c) 1997-2019 by Todd A. Keith
+AIMSum is a component of the AIMAll package ( http://aim.tkgristmill.com )
+
+TP:  64-bit Windows
+
+Much of the Quantum Theory of Atoms in Molecules (QTAIM) is described in the book:
+  "Atoms in Molecules - A Quantum Theory"
+  R.F.W. Bader, Oxford University Press, Oxford, 1990
+
+For additional references see:  http://aim.tkgristmill.com/references.html
+
+Wfn File:  Z:\Dropbox (The University of Manchester)\ICHOR Paper\v1\Data\water\water_min.wfn
+Sum File:  Z:\Dropbox (The University of Manchester)\ICHOR Paper\v1\Data\water\water_min.sum
+
+SumViz File:  Z:\Dropbox (The University of Manchester)\ICHOR Paper\v1\Data\water\water_min.sumviz
+
+Wfn Title:   WATER0001                                                                     
+ 
+Total memory allocated for AIMSum =        0.353 Megabytes
+
+Atomic units (a.u.) used throughout, except where stated otherwise
+
+Model:  Restricted SCF
+ 
+Restricted, closed-shell, single-determinant wavefunction.
+  Number of electrons (from MO Occs)                   =          20.0000000000
+  Number of Alpha electrons (from MO Occs)             =          10.0000000000
+  Number of Beta electrons (from MO Occs)              =          10.0000000000
+  Number of electron pairs (N*(N-1)/2)                 =         190.0000000000
+  Number of electron pairs (from Muller 2EDM)          =         190.0000000000
+ 
+Nuclear Charges and Cartesian Coordinates:
+-------------------------------------------------------------------------------
+Atom      Charge                X                  Y                  Z
+-------------------------------------------------------------------------------
+O1         8.0          -2.3227548000E-01  -2.8903997000E-01   1.4793881100E+00
+H2         1.0           1.3541450800E+00  -6.9848156000E-01   6.7524262000E-01
+H3         1.0          -8.4241746000E-01   1.2210774600E+00   6.5580366000E-01
+O4         8.0           3.4922473000E-01   4.3186716000E-01   6.8584246000E+00
+H5         1.0          -6.9184509000E-01  -7.5237161000E-01   7.7712198100E+00
+H6         1.0           6.3170120000E-02   8.6946640000E-02   5.0744848500E+00
+ 
+Some Atomic Properties:
+----------------------
+  q(A) = Net Charge of Atom A
+  L(A) = Lagrangian of Atom A = -(1/4) Times Atomic Integral of the Laplacian of the Electron Density
+  K(A) = Electronic Kinetic Energy of Atom A (Hamiltonian Form)
+  K_Scaled(A) = K(A) * E(Mol)/K(Mol) = Approximation to Virial-Based Total Energy of Atom A.
+  |Mu_Intra(A)| = Magnitude of Intraatomic Dipole Moment of Atom A
+--------------------------------------------------------------------------------------------------
+Atom A          q(A)              L(A)              K(A)          K_Scaled(A)      |Mu_Intra(A)|
+--------------------------------------------------------------------------------------------------
+O1       -1.1764375834E+00 -4.1184705027E-05  7.5034429304E+01 -7.5730911632E+01  2.6167004721E-01
+H2        5.9991389040E-01  2.0071604046E-05  3.4927363931E-01 -3.5251565661E-01  1.6324761631E-01
+H3        5.9990451222E-01  1.8931610775E-05  3.4927934425E-01 -3.5252141450E-01  1.6325871103E-01
+O4       -1.2139110937E+00 -2.0262784601E-05  7.5033696815E+01 -7.5730172344E+01  1.9425597937E-01
+H5        5.7245433017E-01  1.9102298247E-05  3.6573015305E-01 -3.6912492250E-01  1.7635363924E-01
+H6        6.1808042215E-01  2.3200551515E-06  3.3930999720E-01 -3.4245953028E-01  1.3431714798E-01
+--------------------------------------------------------------------------------------------------
+Total     4.4778399997E-06 -1.0219214085E-06  1.5147171925E+02 -1.5287770550E+02
+ 
+1st Largest |L(A)| = 4.1184705027E-05, atom O1      
+2nd Largest |L(A)| = 2.0262784601E-05, atom O4      
+ 
+Molecular charge q(Mol) from the wfn file:   0.0000000000E+00
+Molecular energy E(Mol) from the wfn file:  -1.5287772006E+02
+Molecular virial ratio (-V(Mol)/T(Mol)) from the wfn file:   2.0092821700E+00
+Note.  K_Scaled(A) = (1+V(Mol)/T(Mol))*K(A) = (E(Mol)/T(Mol))*K(A)
+       Only use K_Scaled(A) data with caution.
+ 
+N_AIMInt(SumA)     =         19.999996
+N_Analytic(Mol)    =         19.999996
+ 
+G_AIMInt(SumA)     =        151.471720
+G_Analytic(Mol)    =        151.471723
+ 
+K_AIMInt(SumA)     =        151.471719
+K_Analytic(Mol)    =        151.471723
+ 
+L_AIMInt(SumA)     =         -0.000001
+L_Analytic(Mol)    =          0.000000
+ 
+VenT_AIMInt(SumA)  =       -433.829364
+VenT_Analytic(Mol) =       -433.829387
+ 
+Some Information About the Atomic Calculations:
+----------------------------------------------
+  Time(sec) = "Elapsed User Time", in Seconds, for Atom A by AIMInt and, if used, by TWOe
+  NProc = Number of Processors Used for AIMInt Job
+  BIM = Basin Integration Method
+  OAQ = Angular Quadrature Outside of Beta Sphere
+  ORQ = Multiple of Default for Radial Quadrature Outside of Beta Sphere
+  IAQ = Multiple of Default for Angular Quadrature Inside of Beta Sphere
+  IRQ = Multiple of Default for Radial Quadrature Inside of Beta Sphere
+  MIR = Maximum Integration Radius
+------------------------------------------------------------------------------------------------------
+Atom A     Time(sec)   NProc      BIM          OAQ                     ORQ      IAQ      IRQ      MIR
+------------------------------------------------------------------------------------------------------
+O1             26        1     Proaim(5)    4500(GS4)                  1.00     1.00     1.00    13.00
+H2              5        1     Proaim(5)    1800(GS4)                  1.00     1.00     1.00    13.00
+H3              5        1     Proaim(5)    1800(GS4)                  1.00     1.00     1.00    13.00
+O4             21        1     Proaim(5)    4500(GS4)                  1.00     1.00     1.00    13.00
+H5              5        1     Proaim(5)    1800(GS4)                  1.00     1.00     1.00    13.00
+H6             20        1     Proaim(5)    4500(GS4)                  1.00     1.00     1.00    13.00
+------------------------------------------------------------------------------------------------------
+Total          82
+Note:  Total wall clock time is less than total of atomic times if more than one atom
+       was calculated at a time
+ 
+Electron Density Critical Point Analysis of Molecular Structure:               
+---------------------------------------------------------------                
+  NACP = Nuclear Attractor Critical Point                                      
+  NNACP = Non-Nuclear Attractor Critical Point                                 
+  BCP = Bond Critical Point                                                    
+  RCP = Ring Critical Point                                                    
+  CCP = Cage Critical Point                                                    
+  Rho = Electron Density                                                       
+  GradRho = Gradient of Electron Density                                       
+  HessRho_EigVals = Eigenvalues of the Hessian of Rho, Ascending Order         
+  HessRho_EigVecs = Eigenvectors of the Hessian of Rho                         
+  DelSqRho = Laplacian of Rho = Trace of Hessian of Rho                        
+  Bond Ellipticity = (HessRho_EigVal(1) / HessRho_EigVal(2)) - 1               
+  V = Virial Field = Potential Energy Density = Trace of Stress Tensor         
+  G = Lagrangian Form of Kinetic Energy Density                                
+  K = Hamiltonian Form of Kinetic Energy Density                               
+  L = K - G = Lagrangian Density = (-1/4)DelSqRho                              
+  Vnuc = Electrostatic Potential from Nuclei                                   
+  Ven = Electron-nuclear attractive contribution to Virial Field V             
+  Vrep = V - Ven = Repulsive contribution to Virial Field V                    
+  DelSqV = Laplacian of V                                                      
+  DelSqVen = Laplacian of Ven                                                  
+  DelSqVrep = Laplacian of Vrep                                                
+  DelSqG = Laplacian of G                                                      
+  DelSqK = Laplacian of K                                                      
+  Stress_EigVals = Eigenvalues of Stress Tensor, Ascending Order               
+  Stress_EigVecs = Eigenvectors of Stress Tensor                               
+  -DivStress = Ehrenfest Force Density = Minus Divergence of Stress Tensor     
+  ESP = Total Electrostatic Potential                                          
+  ESPe = Electrostatic Potential from Electrons                                
+  ESPn = Electrostatic Potential from Nuclei                                   
+  BP = Bond Path                                                               
+  BPL = Bond Path Length                                                       
+  GBL = Geometric Bond Length                                                  
+  GBL_I = Distance Between Nuclear Attractors                                  
+  GBL_II = Distance Between Nuclei                                             
+  GBL_III = Sum of Distances Between BCP and Nuclear Attractors                
+  GBL_IV = Sum of Distances Between BCP and Nuclei                             
+
+CP# 1      Coords = -2.32271099387512E-01 -2.89035026877288E-01  1.47938121421593E+00
+           Type = (3,-3) NACP O1
+           Rho =  2.8974947264E+02     Rho at Nucleus =  2.8974944352E+02
+           GradRho =  6.4863669991E-12 -9.9154018329E-12  3.2446600962E-11
+           HessRho_EigVals = -6.3882662927E+05 -6.3881578775E+05 -6.3880154633E+05
+           HessRho_EigVec1 =  7.5297040006E-01 -6.5802077557E-01  6.6509809561E-03
+           HessRho_EigVec2 =  4.2321092344E-01  4.7648942392E-01 -7.7061685887E-01
+           HessRho_EigVec3 =  5.0391278106E-01  5.8306645231E-01  6.3726401223E-01
+           DelSqRho = -1.9164439633E+06
+           Bond Ellipticity = NA
+           V = -4.7920479005E+05
+           G =  4.6899603911E+01
+           K =  4.7915789044E+05
+           L =  4.7911099084E+05
+           Vnuc =  8.3782075563E+05
+           Ven = -2.4275812211E+08
+           Vrep =  2.4227891732E+08
+           DelSqV =  1.9762528407E+10
+           DelSqVen =  1.6056365317E+12
+           DelSqVrep = -1.5858740033E+12
+           DelSqG =  1.0565952893E+09
+           DelSqK = -2.0819123696E+10
+           Stress_EigVals = -1.5973812587E+05 -1.5973444955E+05 -1.5973221463E+05
+           Stress_EigVec1 =  5.0018419049E-01  5.7886913174E-01  6.4399247193E-01
+           Stress_EigVec2 =  4.2761411417E-01  4.8157737203E-01 -7.6500287850E-01
+           Stress_EigVec3 =  7.5296875430E-01 -6.5802261592E-01  6.6552230023E-03
+           -DivStress = -2.8121507895E+04 -3.1732015649E+04  4.4320923989E+04
+           ESP =  -2.2259447296E+01     ESP at Nucleus =  -2.2259448365E+01
+           ESPe = -2.5254776575E+01     ESPe at Nucleus = -2.5254776366E+01
+           ESPn =  2.9953292793E+00     ESPn at Nucleus =  2.9953280008E+00
+
+CP# 2      Coords =  1.29442688797105E+00 -6.81125038809903E-01  7.04053040078926E-01
+           Type = (3,-3) NACP H2
+           Rho =  4.0653677168E-01     Rho at Nucleus =  3.9481366570E-01
+           GradRho = -3.9673785091E-12  1.1263386057E-12  1.9336741409E-12
+           HessRho_EigVals = -5.9708211252E+00 -5.9463616970E+00 -4.4411147741E+00
+           HessRho_EigVec1 = -8.7474075265E-02  7.7824105380E-01 -6.2184334711E-01
+           HessRho_EigVec2 =  4.8428477552E-01  5.7872755552E-01  6.5615750601E-01
+           HessRho_EigVec3 =  8.7052658912E-01 -2.4375249469E-01 -4.2751395179E-01
+           DelSqRho = -1.6358297596E+01
+           Bond Ellipticity = NA
+           V = -4.1547058024E+00
+           G =  3.2565701662E-02
+           K =  4.1221401007E+00
+           L =  4.0895743991E+00
+           Vnuc =  2.1112155586E+01
+           Ven = -8.5828675754E+00
+           Vrep =  4.4281617730E+00
+           DelSqV =  5.8127264654E+02
+           DelSqVen =  3.4535892398E+02
+           DelSqVrep =  2.3591372256E+02
+           DelSqG =  5.6681524118E+01
+           DelSqK = -6.3795417066E+02
+           Stress_EigVals = -1.5184260072E+00 -1.5138685963E+00 -1.1224111989E+00
+           Stress_EigVec1 =  4.8435961843E-01  5.8642754670E-01  6.4922915254E-01
+           Stress_EigVec2 =  8.4791376137E-02 -7.7006020093E-01  6.3231140230E-01
+           Stress_EigVec3 =  8.7075035606E-01 -2.5121707627E-01 -4.2271006378E-01
+           -DivStress =  1.1653377389E+01 -3.3919304132E+00 -5.6225109335E+00
+           ESP =  -9.5644642722E-01     ESP at Nucleus =  -9.6231964942E-01
+           ESPe = -7.4783020491E+00     ESPe at Nucleus = -7.2955828009E+00
+           ESPn =  6.5218556219E+00     ESPn at Nucleus =  6.3332631515E+00
+
+CP# 3      Coords = -8.17509119492739E-01  1.16447960567400E+00  6.85362656576497E-01
+           Type = (3,-3) NACP H3
+           Rho =  4.0653951404E-01     Rho at Nucleus =  3.9481648808E-01
+           GradRho =  1.3928615206E-13 -3.2147288304E-13  1.6954021737E-13
+           HessRho_EigVals = -5.9708669447E+00 -5.9464071680E+00 -4.4411643076E+00
+           HessRho_EigVec1 =  7.8914330700E-01  1.2167144767E-02 -6.1408859427E-01
+           HessRho_EigVec2 =  5.0204002907E-01  5.6321334330E-01  6.5631283634E-01
+           HessRho_EigVec3 = -3.5384834355E-01  8.2622193781E-01 -4.3834764656E-01
+           DelSqRho = -1.6358438420E+01
+           Bond Ellipticity = NA
+           V = -4.1547419407E+00
+           G =  3.2566167823E-02
+           K =  4.1221757729E+00
+           L =  4.0896096051E+00
+           Vnuc =  2.1112355065E+01
+           Ven = -8.5830065684E+00
+           Vrep =  4.4282646277E+00
+           DelSqV =  5.8127848099E+02
+           DelSqVen =  3.4536516025E+02
+           DelSqVrep =  2.3591332074E+02
+           DelSqG =  5.6682105717E+01
+           DelSqK = -6.3796058670E+02
+           Stress_EigVals = -1.5184376234E+00 -1.5138801970E+00 -1.1224241203E+00
+           Stress_EigVec1 =  5.0972949838E-01  5.6425783356E-01  6.4945279717E-01
+           Stress_EigVec2 = -7.8078244273E-01 -1.3638312487E-02  6.2465412314E-01
+           Stress_EigVec3 = -3.6132342244E-01  8.2548597426E-01 -4.3361075943E-01
+           -DivStress = -4.8655773431E+00  1.1043899420E+01 -5.7686708316E+00
+           ESP =  -9.5644707724E-01     ESP at Nucleus =  -9.6232035416E-01
+           ESPe = -7.4783860576E+00     ESPe at Nucleus = -7.2956696390E+00
+           ESPn =  6.5219389803E+00     ESPn at Nucleus =  6.3333492848E+00
+
+CP# 4      Coords =  3.49218854921061E-01  4.31860396969690E-01  6.85842135968522E+00
+           Type = (3,-3) NACP O4
+           Rho =  2.8977670606E+02     Rho at Nucleus =  2.8977667707E+02
+           GradRho = -5.6221693967E-13  8.3768547654E-12 -1.9771073667E-10
+           HessRho_EigVals = -6.3889786379E+05 -6.3888659449E+05 -6.3887349288E+05
+           HessRho_EigVec1 = -3.2646039604E-01 -3.6577085404E-01  8.7157058931E-01
+           HessRho_EigVec2 =  5.7076842770E-01  6.5870936908E-01  4.9022991446E-01
+           HessRho_EigVec3 =  7.5342352748E-01 -6.5750562691E-01  6.2720662493E-03
+           DelSqRho = -1.9166579512E+06
+           Bond Ellipticity = NA
+           V = -4.7925825634E+05
+           G =  4.6884274469E+01
+           K =  4.7921137206E+05
+           L =  4.7916448779E+05
+           Vnuc =  8.3976300640E+05
+           Ven = -2.4334375787E+08
+           Vrep =  2.4286449961E+08
+           DelSqV =  1.9764746079E+10
+           DelSqVen =  1.6095384451E+12
+           DelSqVrep = -1.5897736990E+12
+           DelSqG =  1.0567335465E+09
+           DelSqK = -2.0821479626E+10
+           Stress_EigVals = -1.5975579660E+05 -1.5975240398E+05 -1.5975005577E+05
+           Stress_EigVec1 =  7.5342301986E-01 -6.5750622218E-01  6.2706409335E-03
+           Stress_EigVec2 =  5.6116805048E-01  6.4794295196E-01  5.1503431937E-01
+           Stress_EigVec3 = -3.4270128722E-01 -3.8451982888E-01  8.5714662044E-01
+           -DivStress =  3.7745170622E+04  4.3449813975E+04  2.0809708317E+04
+           ESP =  -2.2322682081E+01     ESP at Nucleus =  -2.2322683153E+01
+           ESPe = -2.5195110885E+01     ESPe at Nucleus = -2.5195107102E+01
+           ESPn =  2.8724288039E+00     ESPn at Nucleus =  2.8724239493E+00
+
+CP# 5      Coords = -6.54706167061213E-01 -7.10150090828912E-01  7.73606297666359E+00
+           Type = (3,-3) NACP H5
+           Rho =  4.1403573636E-01     Rho at Nucleus =  4.0272556629E-01
+           GradRho =  1.2143064332E-17  7.3378803034E-16  1.0434361708E-15
+           HessRho_EigVals = -6.1120092942E+00 -6.0887236431E+00 -4.6147433128E+00
+           HessRho_EigVec1 = -3.3802284779E-01 -3.9551128820E-01 -8.5399729231E-01
+           HessRho_EigVec2 =  7.5343096346E-01 -6.5749694660E-01  6.2887605220E-03
+           HessRho_EigVec3 =  5.6398788787E-01  6.4130225800E-01 -5.2023944123E-01
+           DelSqRho = -1.6815476250E+01
+           Bond Ellipticity = NA
+           V = -4.2722211517E+00
+           G =  3.4176044584E-02
+           K =  4.2380451071E+00
+           L =  4.2038690625E+00
+           Vnuc =  2.1529542182E+01
+           Ven = -8.9139998511E+00
+           Vrep =  4.6417786994E+00
+           DelSqV =  6.0132857579E+02
+           DelSqVen =  3.6202950524E+02
+           DelSqVrep =  2.3929907055E+02
+           DelSqG =  5.8730693021E+01
+           DelSqK = -6.6005926881E+02
+           Stress_EigVals = -1.5549057856E+00 -1.5506398312E+00 -1.1666755348E+00
+           Stress_EigVec1 =  7.5343010325E-01 -6.5749795989E-01  6.2858779284E-03
+           Stress_EigVec2 =  3.4315504127E-01  4.0134179599E-01  8.4921692190E-01
+           Stress_EigVec3 =  5.6088117919E-01  6.3766856245E-01 -5.2800673035E-01
+           -DivStress = -7.4498268637E+00 -8.4693096530E+00  7.0579721965E+00
+           ESP =  -1.0139782800E+00     ESP at Nucleus =  -1.0195794344E+00
+           ESPe = -7.4644558703E+00     ESPe at Nucleus = -7.2880831794E+00
+           ESPn =  6.4504775903E+00     ESPn at Nucleus =  6.2685037450E+00
+
+CP# 6      Coords =  7.23581319789883E-02  9.81284626707303E-02  5.14237878086533E+00
+           Type = (3,-3) NACP H6
+           Rho =  3.9363849597E-01     Rho at Nucleus =  3.8211159048E-01
+           GradRho =  6.4087624096E-14  7.7785000663E-14  4.5729045550E-13
+           HessRho_EigVals = -5.7540874706E+00 -5.7302114804E+00 -4.2394175983E+00
+           HessRho_EigVec1 =  6.4265875867E-01  7.3437379280E-01 -2.1836861578E-01
+           HessRho_EigVec2 =  7.5345000386E-01 -6.5747487918E-01  6.3146597726E-03
+           HessRho_EigVec3 =  1.3893455863E-01  1.6858800581E-01  9.7584592673E-01
+           DelSqRho = -1.5723716549E+01
+           Bond Ellipticity = NA
+           V = -4.0020523596E+00
+           G =  3.5561611157E-02
+           K =  3.9664907485E+00
+           L =  3.9309291373E+00
+           Vnuc =  2.1862564736E+01
+           Ven = -8.6059471007E+00
+           Vrep =  4.6038947411E+00
+           DelSqV =  5.5796309089E+02
+           DelSqVen =  3.4376077095E+02
+           DelSqVrep =  2.1420231995E+02
+           DelSqG =  5.4173270825E+01
+           DelSqK = -6.1213636172E+02
+           Stress_EigVals = -1.4631695853E+00 -1.4588047559E+00 -1.0800780185E+00
+           Stress_EigVec1 =  7.5344743428E-01 -6.5747785113E-01  6.3118180687E-03
+           Stress_EigVec2 =  6.4366614486E-01  7.3559232821E-01 -2.1118196099E-01
+           Stress_EigVec3 =  1.3420453696E-01  1.6317721028E-01  9.7742638613E-01
+           -DivStress = -1.7224265488E+00 -2.0964434119E+00 -1.2754825437E+01
+           ESP =  -1.0180438277E+00     ESP at Nucleus =  -1.0237652168E+00
+           ESPe = -8.4753917637E+00     ESPe at Nucleus = -8.3509838776E+00
+           ESPn =  7.4573479361E+00     ESPn at Nucleus =  7.3272186608E+00
+
+CP# 7      Coords =  1.04104096536920E+00 -6.11174992688811E-01  8.29170038561150E-01
+           Type = (3,-1) BCP H2 O1
+           Rho =  3.6195195816E-01
+           GradRho = -1.4710455076E-15  3.4867941867E-16  2.8601253310E-16
+           HessRho_EigVals = -1.8465014032E+00 -1.7998767032E+00  1.5611572800E+00
+           HessRho_EigVec1 = -9.6006851969E-02  7.8002414266E-01 -6.1834053825E-01
+           HessRho_EigVec2 =  4.8350797726E-01  5.7954338704E-01  6.5601028839E-01
+           HessRho_EigVec3 =  8.7005903266E-01 -2.3599110026E-01 -4.3278803160E-01
+           DelSqRho = -2.0852208264E+00
+           Bond Ellipticity =  2.5904385526E-02
+           V = -6.6959880344E-01
+           G =  7.4146798427E-02
+           K =  5.9545200502E-01
+           L =  5.2130520659E-01
+           Vnuc =  1.0284386035E+01
+           Ven = -3.7224536638E+00
+           Vrep =  3.0528548604E+00
+           DelSqV = -3.0674274856E+01
+           DelSqVen =  2.1445215946E+01
+           DelSqVrep = -5.2119490802E+01
+           DelSqG =  6.9279162752E+00
+           DelSqK =  2.3746358580E+01
+           Stress_EigVals = -5.2057531623E-01 -5.1089460007E-01  3.6187111286E-01
+           Stress_EigVec1 =  4.8348726659E-01  5.8641613747E-01  6.4988935732E-01
+           Stress_EigVec2 =  9.4028467387E-02 -7.7292927274E-01  6.2748624421E-01
+           Stress_EigVec3 =  8.7028656796E-01 -2.4227350879E-01 -4.2884127200E-01
+           -DivStress =  1.2469126092E+00 -3.4350000952E-01 -6.1671250114E-01
+           ESP =   1.9758201216E+00
+           ESPe = -8.3085659133E+00
+           ESPn =  1.0284386035E+01
+           BPL =  1.7567449613E+00 =  2.9112245031E-01 +  1.4656225110E+00                
+           GBL_I =  1.7566089775E+00                                                      
+           GBL_II =  1.8251089222E+00                                                     
+           GBL_III =  1.7566835748E+00 =  2.9112144897E-01 +  1.4655621259E+00            
+           GBL_IV =  1.8252208951E+00 =  3.5965299037E-01 +  1.4655679047E+00             
+
+CP# 8      Coords = -7.15510150157246E-01  9.23859628526480E-01  8.13625374647783E-01
+           Type = (3,-1) BCP H3 O1
+           Rho =  3.6195365807E-01
+           GradRho = -1.4051260155E-16  1.8995222062E-16 -1.4841372489E-16
+           HessRho_EigVals = -1.8464986814E+00 -1.7998726761E+00  1.5611529629E+00
+           HessRho_EigVec1 =  7.9202279546E-01  3.9865848027E-03 -6.1047849971E-01
+           HessRho_EigVec2 =  5.0294623980E-01  5.6255203406E-01  6.5618616935E-01
+           HessRho_EigVec3 = -3.4604186357E-01  8.2675227010E-01 -4.4354899677E-01
+           DelSqRho = -2.0852183947E+00
+           Bond Ellipticity =  2.5905168686E-02
+           V = -6.6960185744E-01
+           G =  7.4148629378E-02
+           K =  5.9545322806E-01
+           L =  5.2130459868E-01
+           Vnuc =  1.0284458123E+01
+           Ven = -3.7224972389E+00
+           Vrep =  3.0528953815E+00
+           DelSqV = -3.0673615808E+01
+           DelSqVen =  2.1445341258E+01
+           DelSqVrep = -5.2118957065E+01
+           DelSqG =  6.9278707476E+00
+           DelSqK =  2.3745745060E+01
+           Stress_EigVals = -5.2057574434E-01 -5.1089480112E-01  3.6186868802E-01
+           Stress_EigVec1 =  5.0982683214E-01  5.6339795770E-01  6.5012255959E-01
+           Stress_EigVec2 = -7.8481528150E-01 -4.9126011279E-03  6.1971028737E-01
+           Stress_EigVec3 = -3.5233730309E-01  8.2617105227E-01 -4.3965875090E-01
+           -DivStress = -5.0118236548E-01  1.1841198369E+00 -6.3214926422E-01
+           ESP =   1.9758081866E+00
+           ESPe = -8.3086499365E+00
+           ESPn =  1.0284458123E+01
+           BPL =  1.7567445889E+00 =  2.9112483758E-01 +  1.4656197514E+00                
+           GBL_I =  1.7566086067E+00                                                      
+           GBL_II =  1.8251080062E+00                                                     
+           GBL_III =  1.7566832049E+00 =  2.9112383621E-01 +  1.4655593687E+00            
+           GBL_IV =  1.8252199799E+00 =  3.5965483210E-01 +  1.4655651478E+00             
+
+CP# 9      Coords = -2.23144763325637E-02 -2.43838453055793E-02  3.80982698499186E+00
+           Type = (3,-1) BCP H6 O1
+           Rho =  2.6319056498E-02
+           GradRho = -9.1506663358E-17 -1.0755285551E-16 -3.0184188482E-16
+           HessRho_EigVals = -3.5683738488E-02 -3.4260335354E-02  1.4656849514E-01
+           HessRho_EigVec1 =  7.5266485240E-01 -6.5836697018E-01  6.9679651171E-03
+           HessRho_EigVec2 =  6.5413857573E-01  7.4654438368E-01 -1.2154919553E-01
+           HessRho_EigVec3 =  7.4822080362E-02  9.6043822086E-02  9.9256095054E-01
+           DelSqRho =  7.6624421293E-02
+           Bond Ellipticity =  4.1546678368E-02
+           V = -1.9582746547E-02
+           G =  1.9369425935E-02
+           K =  2.1332061182E-04
+           L = -1.9156105323E-02
+           Vnuc =  7.5779752294E+00
+           Ven = -1.9944515820E-01
+           Vrep =  1.7986241165E-01
+           DelSqV = -6.7820528223E-02
+           DelSqVen = -5.8065796653E-01
+           DelSqVrep =  5.1283743830E-01
+           DelSqG =  1.3857297161E-01
+           DelSqK = -7.0752443384E-02
+           Stress_EigVals = -1.0819369191E-02 -1.0501254756E-02  1.7378773997E-03
+           Stress_EigVec1 =  6.5577519428E-01  7.4881749659E-01 -9.6079401350E-02
+           Stress_EigVec2 =  7.5272455361E-01 -6.5829834824E-01  7.0022214500E-03
+           Stress_EigVec3 =  5.8005525271E-02  7.6913207623E-02  9.9534904307E-01
+           -DivStress =  6.3554286133E-04  8.0901525265E-04  7.9100145155E-03
+           ESP =   1.4945672653E-01
+           ESPe = -7.4285185029E+00
+           ESPn =  7.5779752294E+00
+           BPL =  3.6972123281E+00 =  1.3415786312E+00 +  2.3556336969E+00                
+           GBL_I =  3.6959769628E+00                                                      
+           GBL_II =  3.6267581396E+00                                                     
+           GBL_III =  3.6963199763E+00 =  1.3415164766E+00 +  2.3548034997E+00            
+           GBL_IV =  3.6272211392E+00 =  1.2724235178E+00 +  2.3547976213E+00             
+
+CP# 10     Coords =  1.12543593240267E-01  1.46835434543017E-01  5.41896976720949E+00
+           Type = (3,-1) BCP O4 H6
+           Rho =  3.5252779127E-01
+           GradRho =  2.4286128664E-17  2.6020852140E-17  3.2959746044E-16
+           HessRho_EigVals = -1.8300323772E+00 -1.7854423207E+00  1.5682642932E+00
+           HessRho_EigVec1 =  6.4138592877E-01  7.3280732356E-01 -2.2719488753E-01
+           HessRho_EigVec2 =  7.5343954901E-01 -6.5748687393E-01  6.3132078606E-03
+           HessRho_EigVec3 =  1.4475129142E-01  1.7522681629E-01  9.7382884866E-01
+           DelSqRho = -2.0472104048E+00
+           Bond Ellipticity =  2.4974235218E-02
+           V = -6.5941615633E-01
+           G =  7.3806777563E-02
+           K =  5.8560937877E-01
+           L =  5.1180260121E-01
+           Vnuc =  1.1005133017E+01
+           Ven = -3.8796152351E+00
+           Vrep =  3.2201990787E+00
+           DelSqV = -3.2419820865E+01
+           DelSqVen =  2.2529822818E+01
+           DelSqVrep = -5.4949643683E+01
+           DelSqG =  6.8776594758E+00
+           DelSqK =  2.5542161389E+01
+           Stress_EigVals = -5.1225603660E-01 -5.0314964414E-01  3.5598952441E-01
+           Stress_EigVec1 =  7.5344203806E-01 -6.5748403201E-01  6.3121257465E-03
+           Stress_EigVec2 =  6.4232332081E-01  7.3394917739E-01 -2.2076991766E-01
+           Stress_EigVec3 =  1.4051991611E-01  1.7039176228E-01  9.7530549087E-01
+           -DivStress = -2.3101503883E-01 -2.8002360772E-01 -1.5926298183E+00
+           ESP =   1.9521468034E+00
+           ESPe = -9.0529862134E+00
+           ESPn =  1.1005133017E+01
+           BPL =  1.7701739674E+00 =  1.4864658524E+00 +  2.8370811499E-01                
+           GBL_I =  1.7699805073E+00                                                      
+           GBL_II =  1.8393581589E+00                                                     
+           GBL_III =  1.7700703787E+00 =  1.4863631103E+00 +  2.8370726838E-01            
+           GBL_IV =  1.8394892332E+00 =  1.4863684808E+00 +  3.5312075237E-01             
+
+CP# 11     Coords = -4.84562092586739E-01 -5.16667259879047E-01  7.58063801435843E+00
+           Type = (3,-1) BCP O4 H5
+           Rho =  3.6535835460E-01
+           GradRho = -2.7389722435E-13 -3.0860383693E-13  5.5325882764E-13
+           HessRho_EigVals = -1.8166708003E+00 -1.7721784651E+00  1.5347289178E+00
+           HessRho_EigVec1 = -3.3250074581E-01 -3.8922417659E-01 -8.5903887828E-01
+           HessRho_EigVec2 =  7.5342929770E-01 -6.5749889577E-01  6.2845385107E-03
+           HessRho_EigVec3 =  5.6726320822E-01  6.4513544502E-01 -5.1187177123E-01
+           DelSqRho = -2.0541203475E+00
+           Bond Ellipticity =  2.5106012783E-02
+           V = -6.7240516708E-01
+           G =  7.9437540102E-02
+           K =  5.9296762698E-01
+           L =  5.1353008688E-01
+           Vnuc =  1.0190591595E+01
+           Ven = -3.7232177774E+00
+           Vrep =  3.0508126104E+00
+           DelSqV = -2.7760952459E+01
+           DelSqVen =  2.0932701548E+01
+           DelSqVrep = -4.8693654007E+01
+           DelSqG =  6.6884257229E+00
+           DelSqK =  2.1072526736E+01
+           Stress_EigVals = -5.1711053428E-01 -5.0793067948E-01  3.5263604667E-01
+           Stress_EigVec1 =  7.5342807463E-01 -6.5750033185E-01  6.2809215205E-03
+           Stress_EigVec2 =  3.3685450496E-01  3.9416911502E-01  8.5507879827E-01
+           Stress_EigVec3 =  5.6469033890E-01  6.4212461593E-01 -5.1846002620E-01
+           -DivStress = -6.7447983299E-01 -7.6702268196E-01  6.1369617747E-01
+           ESP =   1.8711286923E+00
+           ESPe = -8.3194629024E+00
+           ESPn =  1.0190591595E+01
+           BPL =  1.7557626627E+00 =  1.4548603668E+00 +  3.0090229585E-01                
+           GBL_I =  1.7556503672E+00                                                      
+           GBL_II =  1.8219338434E+00                                                     
+           GBL_III =  1.7557181212E+00 =  1.4548169234E+00 +  3.0090119784E-01            
+           GBL_IV =  1.8220344780E+00 =  1.4548230913E+00 +  3.6721138669E-01             
+
+Number of NACPs  =      6
+Number of NNACPs =      0
+Number of BCPs   =      5
+Number of RCPs   =      0
+Number of CCPs   =      0
+NumNACP + NumNNACP - NumBCP + NumRCP - NumCCP =      1
+Poincare-Hopf Relationship is Satisfied
+
+Bond Path Angles and Corresponding Geometric Bond Angles:
+--------------------------------------------------------
+  BPA     = A-B-C Bond Path Angle
+  GBA_I   = A-B-C Geometric Bond Angle in Terms of Nuclear Attractors
+  GBA_II  = A-B-C Geometric Bond Angle in Terms of Nuclei
+  GBA_III = A-B-C Geometric Bond Angle in Terms of A|B and C|B BCPs and Nuclear Attractor B
+  GBA_IV  = A-B-C Geometric Bond Angle in Terms of A|B and C|B BCPs and Nucleus B
+-------------------------------------------------------------------------------------------------
+Atom A    Atom B    Atom C        BPA          GBA_I         GBA_II       GBA_III       GBA_IV
+-------------------------------------------------------------------------------------------------
+H3        O1        H2        103.07523831  105.94665797  106.10401089  105.47678214  105.47618818
+H6        O1        H2        111.10160079  112.90391172  112.90492403  112.72504908  112.72511107
+H6        O1        H3        111.08799337  112.87776041  112.87788701  112.70307922  112.70314123
+O4        H6        O1        179.25649080  173.47320653  173.47043396  173.76059030  173.62834509
+H5        O4        H6        102.77500050  105.81716506  105.97132621  105.33601886  105.33542961
+
+Total time for electron density critical point search, analysis and connectivity = 5 sec (NProc = 6)               
+ 
+Virial-Based Atomic Energy Components:
+-------------------------------------
+  Ee(A) = E(A) - W(A) = -T(A)
+        = Contribution of Atom A to Electronic Energy of Molecule.
+          Not additive to give molecular Ee unless molecular electronic virial theorem is satisfied.
+  T(A) = Electronic Kinetic Energy of Atom A (Hamiltonian Form)
+  Ven(A) = Ven(A,Mol) = VenT(A)
+         = Attraction Energy Between Electron Density Distribution of Atom A and Nuclei of Molecule
+  VenO(A) = Ven(A,A)
+          = Attraction Energy Between Electron Density Distribution of Atom A and Nucleus of Atom A
+  Vee(A) = Vee(A,A) + Vee(A,A')/2
+         = Two-Electron Interaction Energy of Atom A with Itself Plus Half of Two-Electron Interaction Energy
+           Between Atom A and Other Atoms of Molecule
+  Vnn(A) - W(A) = Contribution of Atom A to the Nuclear Repulsion Energy of Molecule Minus
+                  the Nuclear Virial of Energy-Gradient-Based Forces on Nuclei of Molecule.
+                  Calculation of Vnn(A) - W(A) assumes satisfaction of the atomic virial theorem:
+                       2T(A) + Ven(A) + Vee(A) + Vnn(A) - W(A) = 0
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------------------------------------------
+Atom A         Ee(A)              T(A)             Ven(A)           VenO(A)            Vee(A)        Vnn(A) - W(A)
+--------------------------------------------------------------------------------------------------------------------
+O1       -7.5034429304E+01  7.5034429304E+01 -2.1142604097E+02 -1.8425905751E+02
+H2       -3.4927363931E-01  3.4927363931E-01 -2.8332165900E+00 -6.7263597400E-01
+H3       -3.4927934425E-01  3.4927934425E-01 -2.8333082326E+00 -6.7264748683E-01
+O4       -7.5033696815E+01  7.5033696815E+01 -2.1053937372E+02 -1.8432402872E+02
+H5       -3.6573015305E-01  3.6573015305E-01 -2.9863295828E+00 -7.0539103769E-01
+H6       -3.3930999720E-01  3.3930999720E-01 -3.2110953823E+00 -6.4989867023E-01
+--------------------------------------------------------------------------------------------------------------------
+Total    -1.5147171925E+02  1.5147171925E+02 -4.3382936448E+02 -3.7128365940E+02
+ 
+More Virial-Based Atomic Energy Components:
+------------------------------------------
+  E(A) = Ee(A) + W(A)
+       = T(A) + Ven(A) + Vee(A) + Vnn(A) = Contribution of Atom A to Total Energy E of Molecule
+         Not additive to give molecular E unless molecular virial theorem is satisfied.
+  Ee(A) = E(A) - W(A) = Contribution of Atom A to Electronic Energy of Molecule
+          Not additive to give molecular Ee unless molecular virial theorem is satisfied.
+  W(A) = Contribution of Atom A to Nuclear Virial of Energy-Gradient-Based Forces on Nuclei of Molecule
+  Vnn(A) = Contribution of Atom A to Nuclear Repulsion Energy of Molecule
+           Calculation of Vnn(A) assumes satisfaction of the atomic virial theorem:
+                2T(A) + Ven(A) + Vee(A) + Vnn(A) - W(A) = 0
+  VeeC(A) = Coulomb Part of Vee(A)
+  VeeX(A) = Exchange-Correlation Part of Vee(A)
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------------------------------------------
+Atom A          E(A)             Ee(A)              W(A)             Vnn(A)           VeeC(A)           VeeX(A)
+--------------------------------------------------------------------------------------------------------------------
+O1                         -7.5034429304E+01
+H2                         -3.4927363931E-01
+H3                         -3.4927934425E-01
+O4                         -7.5033696815E+01
+H5                         -3.6573015305E-01
+H6                         -3.3930999720E-01
+--------------------------------------------------------------------------------------------------------------------
+Total                      -1.5147171925E+02
+ 
+IQA Atomic Energy Components:
+----------------------------
+  E_IQA(A) = Contribution of Atom A to Total Energy E of Molecule, Using IQA Additive Atomic Energy Definition
+           = T(A) + Vne(A,Mol)/2 + Ven(A,Mol)/2 + Vee(A) + Vnn(A,Mol)/2
+  T(A) = Electronic Kinetic Energy of Atom A (Hamiltonian Form)
+  Vne(A,Mol)/2 = Half of Attraction Energy Between Nucleus of Atom A and Electron Density Distribution of Molecule
+  Ven(A,Mol)/2 = Half of Attraction Energy Between Electron Density Distribution of Atom A and Nuclei of Molecule
+  Vee(A) = Vee(A,A) + Vee(A,A')/2
+         = Two-Electron Interaction Energy of Atom A with Itself Plus Half of Two-Electron Interaction Energy
+           Between Atom A and Other Atoms of Molecule
+  Vnn(A,Mol)/2 = Vnn(A,A')/2 = Half of Repulsion Energy Between Nucleus of Atom A and Other Nuclei of Molecule
+  VeeC(A) = Coulomb Part of Vee(A)
+  VeeX(A) = Exchange-Correlation Part of Vee(A)
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Atom A        E_IQA(A)            T(A)          Vne(A,Mol)/2      Ven(A,Mol)/2         Vee(A)         Vnn(A,Mol)/2        VeeC(A)           VeeX(A)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+O1                          7.5034429304E+01 -1.0101910546E+02 -1.0571302048E+02                    1.1981312003E+01
+H2                          3.4927363931E-01 -3.6477914005E+00 -1.4166082950E+00                    3.1666315758E+00
+H3                          3.4927934425E-01 -3.6478348195E+00 -1.4166541163E+00                    3.1666746424E+00
+O4                          7.5033696815E+01 -1.0078042841E+02 -1.0526968686E+02                    1.1489695797E+01
+H5                          3.6573015305E-01 -3.6440415897E+00 -1.4931647914E+00                    3.1342518725E+00
+H6                          3.3930999720E-01 -4.1754919388E+00 -1.6055476912E+00                    3.6636093304E+00
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                       1.5147171925E+02 -2.1691469362E+02 -2.1691468223E+02                    3.6602175221E+01
+ 
+More IQA Atomic Energy Components:
+---------------------------------
+  Vneen(A) = Vne(A,Mol)/2 + Ven(A,Mol)/2
+  V_IQA(A) = Vne(A,Mol)/2 + Ven(A,Mol)/2 + Vee(A,A) + Vee(A,A')/2 + Vnn(A,A')/2
+           = VC_IQA(A) + VX_IQA(A) = Potential Energy Contribution to E_IQA(A)
+           = E_IQA(A) - T(A)
+  VC_IQA(A) = Vne(A,Mol)/2 + Ven(A,Mol)/2 + VeeC(A,A) + VeeC(A,A')/2 + Vnn(A,A')/2
+            = Coulomb Potential Energy Contribution to E_IQA(A)
+            = E_IQA(A) - T(A) - VeeX(A)
+  VX_IQA(A) = VeeX(A,A) + VeeX(A,A')/2
+            = Exchange-Correlation Energy Contribution to E_IQA(A)
+            = E_IQA(A) - T(A) - VC_IQA(A)
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------
+Atom A        Vneen(A)          V_IQA(A)         VC_IQA(A)         VX_IQA(A)
+--------------------------------------------------------------------------------
+O1       -2.0673212594E+02
+H2       -5.0643996955E+00
+H3       -5.0644889358E+00
+O4       -2.0605011527E+02
+H5       -5.1372063811E+00
+H6       -5.7810396300E+00
+--------------------------------------------------------------------------------
+Total    -4.3382937585E+02
+ 
+IQA Intraatomic ("Self") Energy Components:
+------------------------------------------
+  E_IQA_Intra(A) = T(A) + Vne(A,A) + Vee(A,A)
+                 = Intraatomic ("Self") Contribution to E_IQA(A)
+  T(A) = Electronic Kinetic Energy of Atom A (Hamiltonian Form)
+  Vne(A,A) = Attraction Energy Between Electron Density Distribution of Atom A and Nucleus of Atom A
+  Vee(A,A) = Two-electron Interaction Energy of Atom A With Itself
+  VeeC(A,A) = Coulomb Part of Vee(A,A)
+  VeeX(A,A) = Exchange-Correlation Part of Vee(A,A)
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------------------------------------------
+Atom A     E_IQA_Intra(A)         T(A)            Vne(A,A)          Vee(A,A)         VeeC(A,A)         VeeX(A,A)
+--------------------------------------------------------------------------------------------------------------------
+O1                          7.5034429304E+01 -1.8425905751E+02
+H2                          3.4927363931E-01 -6.7263597400E-01
+H3                          3.4927934425E-01 -6.7264748683E-01
+O4                          7.5033696815E+01 -1.8432402872E+02
+H5                          3.6573015305E-01 -7.0539103769E-01
+H6                          3.3930999720E-01 -6.4989867023E-01
+--------------------------------------------------------------------------------------------------------------------
+Total                       1.5147171925E+02 -3.7128365940E+02
+ 
+IQA Atomic Contributions to Interatomic ("Interaction") Energy Components:
+-------------------------------------------------------------------------
+  E_IQA_Inter(A) = E_IQA_Inter(A,A')/2
+                 = Vne(A,A')/2 + Ven(A,A')/2 + Vee(A,A')/2 + Vnn(A)
+                 = Interatomic ("Interaction") Contribution to E_IQA(A) = E_IQA(A) - E_IQA_Intra(A)
+  Vne(A,A')/2 = Half of Attraction Energy Between Nucleus of Atom A and Electron Density Distribution of Other Atoms in Molecule
+              = (1/2)[Vne(A,Mol) - Vne(A,A)]
+  Ven(A,A')/2 = Half of Attraction Energy Between Electron Density Distribution of Atom A and Nuclei of Other Atoms in Molecule
+              = (1/2)[Ven(A,Mol) - Ven(A,A)]
+  Vee(A,A')/2 = Half of Two-electron Interaction Energy Between Atom A and Other Atoms of Molecule
+            = Vee(A) - Vee(A,A)
+  Vnn(A) = Vnn(A,Mol)/2 = Vnn(A,A')/2 = Half of Repulsion Energy Between Nucleus of Atom A and Other Nuclei of Molecule
+  VeeC(A,A')/2 = Coulomb Part of Vee(A,A')/2
+  VeeX(A,A')/2 = Exchange-Correlation Part of Vee(A,A')/2
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------------------------------------------------------------
+Atom A     E_IQA_Inter(A)      Vne(A,A')/2       Ven(A,A')/2      Vee(A,A')/2          Vnn(A)         VeeC(A,A')/2      VeeX(A,A')/2
+--------------------------------------------------------------------------------------------------------------------------------------
+O1                         -8.8895767056E+00 -1.3583491726E+01                    1.1981312003E+01
+H2                         -3.3114734135E+00 -1.0802903080E+00                    3.1666315758E+00
+H3                         -3.3115110761E+00 -1.0803303729E+00                    3.1666746424E+00
+O4                         -8.6184140467E+00 -1.3107672497E+01                    1.1489695797E+01
+H5                         -3.2913460709E+00 -1.1404692725E+00                    3.1342518725E+00
+H6                         -3.8505426037E+00 -1.2805983561E+00                    3.6636093304E+00
+--------------------------------------------------------------------------------------------------------------------------------------
+Total                      -3.1272863917E+01 -3.1272852532E+01                    3.6602175221E+01
+ 
+More IQA Atomic Contributions to Interatomic ("Interaction") Energy Components:
+------------------------------------------------------------------------------
+  Vneen(A,A')/2 = Vne(A,A')/2 + Ven(A,A')/2
+  V_IQA_Inter(A) = Vne(A,A')/2 + Ven(A,A')/2 + Vee(A,A')/2 + Vnn(A,A')/2
+                 = VC_IQA_Inter(A) + VX_IQA_Inter(A)
+                 = Potential Energy Contribution to E_IQA_Inter(A)
+                 = E_IQA_Inter(A)
+  VC_IQA_Inter(A) = Vne(A,A')/2 + Ven(A,A')/2 + VeeC(A,A')/2 + Vnn(A,A')/2
+                  = Coulomb Potential Energy Contribution to E_IQA_Inter(A)
+                  = E_IQA_Inter(A) - VeeX(A,A')/2
+  VX_IQA_Inter(A) = VeeX(A,A')/2
+                  = Exchange-Correlation Energy Contribution to E_IQA_Inter(A)
+                  = E_IQA_Inter(A) - VC_IQA_Inter(A)
+See "2EDM Note" and "DFT Note".
+--------------------------------------------------------------------------------
+Atom A      Vneen(A,A')/2    V_IQA_Inter(A)    VC_IQA_Inter(A)   VX_IQA_Inter(A)
+--------------------------------------------------------------------------------
+O1       -2.2473068432E+01
+H2       -4.3917637215E+00
+H3       -4.3918414490E+00
+O4       -2.1726086544E+01
+H5       -4.4318153434E+00
+H6       -5.1311409598E+00
+--------------------------------------------------------------------------------
+Total    -6.2545716449E+01
+ 
+Atomic Electron Populations, Localization and Delocalization Data:
+-----------------------------------------------------------------
+  N(A) = Average Number of Electrons in Atom A
+  LI(A) = Electron Localization Index of Atom A = Average Number of Electrons Localized in Atom A
+  %Loc(A) = 100 * LI(A) / N(A)
+          = Percentage of Average Number of Electrons in Atom A that are Localized in Atom A
+  DI(A,A')/2 = Electron Delocalization Index of Atom A = Average Number of Electrons in Atom A
+               that are Delocalized (Shared) Between Atom A and Other Atoms of Molecule
+             = N(A) - LI(A)
+  %Deloc(A,A') = 100 * (DI(A,A')/2) / N(A)
+               = Percentage of Average Number of Electrons in Atom A That are Shared With Other
+                 Atoms of Molecule
+Note:  ECP-Modeled Core Electrons are NOT Included Here
+See "2EDM Note".
+--------------------------------------------------------------------------------------------------
+Atom A          N(A)             LI(A)            %Loc(A)          DI(A,A')/2       %Deloc(A,A')
+--------------------------------------------------------------------------------------------------
+O1        9.1764375834E+00  8.4497198751E+00  9.2080611875E+01  7.2671770826E-01  7.9193881248E+00
+H2        4.0008610960E-01  7.0592925640E-02  1.7644433022E+01  3.2949318396E-01  8.2355566978E+01
+H3        4.0009548780E-01  7.0596245388E-02  1.7644849178E+01  3.2949924241E-01  8.2355150822E+01
+O4        9.2139110938E+00  8.5519355925E+00  9.2815477656E+01  6.6197550127E-01  7.1845223438E+00
+H5        4.2754566980E-01  8.0199586979E-02  1.8758133375E+01  3.4734608282E-01  8.1241866625E+01
+H6        3.8191957800E-01  5.8731686956E-02  1.5378024678E+01  3.2318789104E-01  8.4621975322E+01
+--------------------------------------------------------------------------------------------------
+Total     1.9999995522E+01  1.7281775913E+01  8.6408898908E+01  2.7182196098E+00  1.3591101092E+01
+ 
+More Atomic Electron Populations, Localization and Delocalization Data:
+----------------------------------------------------------------------
+  N(A) = Average Number of Electrons in Atom A
+       = LI(A) + DI(A,A')/2 = LI(A) + DI_Bond(A,A')/2 + DI_NonBond(A,A')/2
+  LI(A) = Electron Localization Index of Atom A = Average Number of Electrons Localized in Atom A
+  DI(A,A')/2 = Electron Delocalization Index of Atom A = Average Number of Electrons in Atom A that
+               are Delocalized (Shared) Between Atom A and Other Atoms of Molecule
+             = N(A) - LI(A) = DI_Bond(A,A')/2 + DI_NonBond(A,A')/2
+  DI_Bond(A,A')/2 = Bonding Contribution to DI(A,A')/2 = Average Number of Electrons in Atom A that
+                    are Shared With Atoms to Which Atom A is Bonded
+  DI_NonBond(A,A')/2 = Non-Bonding Contribution to DI(A,A')/2 = Average Number of Electrons in Atom A
+                       that are Shared with Atoms to Which Atom A is NOT bonded
+                     = DI(A,A')/2 - DI_Bond(A,A')/2
+Note:  ECP-Modeled Core Electrons are NOT Included Here
+See "2EDM Note".
+-----------------------------------------------------------------------------------------------------
+Atom A          N(A)             LI(A)           DI(A,A')/2     DI_Bond(A,A')/2    DI_NonBond(A,A')/2
+-----------------------------------------------------------------------------------------------------
+O1        9.1764375834E+00  8.4497198751E+00  7.2671770826E-01  6.8794760888E-01    3.8770099376E-02
+H2        4.0008610960E-01  7.0592925640E-02  3.2949318396E-01  3.2444983633E-01    5.0433476262E-03
+H3        4.0009548780E-01  7.0596245388E-02  3.2949924241E-01  3.2445967870E-01    5.0395637096E-03
+O4        9.2139110938E+00  8.5519355925E+00  6.6197550127E-01  6.2273638824E-01    3.9239113035E-02
+H5        4.2754566980E-01  8.0199586979E-02  3.4734608282E-01  3.4307356417E-01    4.2725186550E-03
+H6        3.8191957800E-01  5.8731686956E-02  3.2318789104E-01  3.1870091792E-01    4.4869731250E-03
+-----------------------------------------------------------------------------------------------------
+Total     1.9999995522E+01  1.7281775913E+01  2.7182196098E+00  2.6213679942E+00    9.6851615527E-02
+ 
+Atomic Electron Pair Contributions:
+----------------------------------
+  D2(A,A) = Average Number of Electron Pairs Formed in Atom A
+          = (1/2)[N(A) * N(A) - LI(A)]
+  D2(A,A') = Half of Average Number of Electron Pairs Formed
+             Between Atom A and Other Atoms of Molecule
+          = (1/2)[N(A) * N(A') - DI(A,A') / 2]
+  D2(A,Mol) = D2(A,A) + D2(A,A')
+Note:  ECP-Modeled Core Electrons are NOT Included Here
+See "2EDM Note".
+--------------------------------------------------------------
+Atom A         D2(A,A)          D2(A,A')         D2(A,Mol)
+--------------------------------------------------------------
+O1        3.7878643423E+01  4.9297513619E+01  8.7176157042E+01
+H2        4.4737984727E-02  3.7560800565E+00  3.8008180412E+00
+H3        4.4740076985E-02  3.7561670571E+00  3.8009071341E+00
+O4        3.8172111026E+01  4.9360044365E+01  8.7532155391E+01
+H5        5.1297856393E-02  4.0103860067E+00  4.0616838631E+00
+H6        4.3565438552E-02  3.5846705524E+00  3.6282359910E+00
+--------------------------------------------------------------
+Total     7.6235095806E+01  1.1376486166E+02  1.8999995746E+02
+ 
+Diatomic Electron Pair Contributions and Delocalization Data:
+------------------------------------------------------------
+  2*D2(A,B) = 2*D2(B,A) = Average Number of Electron Pairs Formed Between Atoms A and B
+            = N(A) * N(B) - DI(A,B) / 2
+  DI(A,B) = DI(B,A) = Electron Delocalization Index.  Average Number of Electrons Delocalized
+            (Shared) Between Atoms A and B.  Bond Index When Atoms A and B Connected by a Bond Path
+ %Deloc(A,B) = 100 * (DI(A,B)/2) / N(A)
+             = Percentage of Average Number of Electrons in Atom A That are Shared With Atom B
+ %Deloc(B,A) = 100 * (DI(A,B)/2) / N(B)
+             = Percentage of Average Number of Electrons in Atom B That are Shared With Atom A
+Note:  ECP-Modeled Core Electrons are NOT Included Here
+See "2EDM Note".
+----------------------------------------------------------------------------------------------------
+Atom A    Atom B       2*D2(A,B)          DI(A,B)          %Deloc(A,B)       %Deloc(B,A)
+----------------------------------------------------------------------------------------------------
+O1        H2        3.3469153764E+00  6.4889967267E-01  3.5356840101E+00  8.1095001438E+01  (Bonded)
+O1        H3        3.3469915925E+00  6.4891935740E-01  3.5357912671E+00  8.1095560584E+01  (Bonded)
+H2        H3        1.5628109451E-01  7.5831053459E-03  9.4768415647E-01  9.4766194285E-01
+O1        O4        8.4513001925E+01  7.5756251646E-02  4.1277593269E-01  4.1109714905E-01
+H2        O4        3.6856809694E+00  1.3537486572E-03  1.6918216163E-01  7.3462216177E-03
+H3        O4        3.6857677569E+00  1.3529933644E-03  1.6908380695E-01  7.3421229631E-03
+O1        H5        3.9224501478E+00  1.7920104168E-03  9.7641944410E-03  2.0956947332E-01
+H2        H5        1.7104589144E-01  1.8384526807E-05  2.2975712436E-03  2.1500073683E-03
+H3        H5        1.7104990854E-01  1.8369545803E-05  2.2956452100E-03  2.1482553912E-03
+O4        H5        3.5962942259E+00  6.8614712833E-01  3.7234303725E+00  8.0242553813E+01  (Bonded)
+O1        H6        3.4656230755E+00  7.8076187697E-02  4.2541665536E-01  1.0221548226E+01  (Bonded)
+H2        H6        1.5223669511E-01  1.1280460722E-03  1.4097541069E-01  1.4768110058E-01
+H3        H6        1.5224088443E-01  1.1268308617E-03  1.4082024117E-01  1.4752200811E-01
+O4        H6        3.2393102126E+00  5.5932564814E-01  3.0352238178E+00  7.3225579462E+01  (Bonded)
+H5        H6        1.5992936275E-01  6.7173980673E-03  7.8557666956E-01  8.7942572917E-01
+ 
+ 
+Areas of Interatomic Surfaces:
+-----------------------------
+  Area_IAS(A|B),0.0004 = Area of the Part of Interatomic Surface Between Atoms
+                         A and B Whose Electron Density is Greater Than 0.0004
+  Area_IAS(A|B),0.001 = Area of the Part of Interatomic Surface Between Atoms
+                        A and B Whose Electron Density is Greater Than 0.001
+  Area_IAS(A|B),0.002 = Area of the Part of Interatomic Surface Between Atoms
+                        A and B Whose Electron Density is Greater Than 0.002
+-----------------------------------------------------------------------------------------
+Atom A    Atom B     Area_IAS(A|B),0.0004     Area_IAS(A|B),0.001     Area_IAS(A|B),0.002
+-----------------------------------------------------------------------------------------
+O1        H2           2.6949051193E+01         2.0781496144E+01        1.6787088970E+01
+O1        H3           2.6949108331E+01         2.0781532195E+01        1.6787114294E+01
+O1        H6           3.2242199041E+01         2.2424414549E+01        1.6247618152E+01
+-----------------------------------------------------------------------------------------
+O1        Total        8.6140358565E+01         6.3987442888E+01        4.9821821416E+01
+ 
+H2        O1           2.6949051193E+01         2.0781496144E+01        1.6787088970E+01
+-----------------------------------------------------------------------------------------
+H2        Total        2.6949051193E+01         2.0781496144E+01        1.6787088970E+01
+ 
+H3        O1           2.6949108331E+01         2.0781532195E+01        1.6787114294E+01
+-----------------------------------------------------------------------------------------
+H3        Total        2.6949108331E+01         2.0781532195E+01        1.6787114294E+01
+ 
+O4        H6           3.4438128815E+01         2.4630583858E+01        1.8621972291E+01
+O4        H5           2.8071786204E+01         2.1603462420E+01        1.7389176596E+01
+-----------------------------------------------------------------------------------------
+O4        Total        6.2509915019E+01         4.6234046278E+01        3.6011148887E+01
+ 
+H5        O4           2.8071786204E+01         2.1603462420E+01        1.7389176596E+01
+-----------------------------------------------------------------------------------------
+H5        Total        2.8071786204E+01         2.1603462420E+01        1.7389176596E+01
+ 
+H6        O1           3.2242199041E+01         2.2424414549E+01        1.6247618152E+01
+H6        O4           3.4438128815E+01         2.4630583858E+01        1.8621972291E+01
+-----------------------------------------------------------------------------------------
+H6        Total        6.6680327856E+01         4.7054998407E+01        3.4869590443E+01
+ 
+-----------------------------------------------------------------------------------------
+Total     Total        2.9730054717E+02         2.2044297833E+02        1.7166594061E+02
+ 
+ 
+Some Properties of Interatomic Surfaces:
+---------------------------------------
+  N_IAS(A|B) = Integral of Electron Density Rho(r) Over Interatomic Surface Between Atoms A and B
+  G_IAS(A|B) = Integral of Lagrangian Kinetic Energy Density G(r) Over Interatomic Surface Between Atoms A and B
+  K_IAS(A|B) = Integral of Hamiltonian Kinetic Energy Density K(r) Over Interatomic Surface Between Atoms A and B
+  L_IAS(A|B) = Integral of Lagrangian Density L(r) Over Interatomic Surface Between Atoms A and B
+  DelSqRho_IAS(A|B) = Integral of Laplacian of Electron Density DelSqRho(r) Over Interatomic Surface Between Atoms A and B
+  V_IAS(A|B) = Integral of Virial Field V(r) Over Interatomic Surface Between Atoms A and B
+------------------------------------------------------------------------------------------------------------------------------
+Atom A    Atom B       N_IAS(A|B)        G_IAS(A|B)        K_IAS(A|B)        L_IAS(A|B)     DelSqRho_IAS(A|B)    V_IAS(A|B)
+------------------------------------------------------------------------------------------------------------------------------
+O1        H2        7.0521348233E-01  5.2584704990E-01  4.8865691131E-01 -3.7190138588E-02  1.4876055435E-01 -1.0145039612E+00
+O1        H3        7.0522064513E-01  5.2585289447E-01  4.8866057276E-01 -3.7192321710E-02  1.4876928684E-01 -1.0145134672E+00
+O1        H6        1.5900618685E-01  1.3021492902E-01 -1.6962679395E-02 -1.4717760842E-01  5.8871043368E-01 -1.1325224963E-01
+------------------------------------------------------------------------------------------------------------------------------
+O1        Total     1.5694403143E+00  1.1819148734E+00  9.6035480468E-01 -2.2156006872E-01  8.8624027487E-01 -2.1422696780E+00
+ 
+H2        O1        7.0521348233E-01  5.2584704990E-01  4.8865691131E-01 -3.7190138588E-02  1.4876055435E-01 -1.0145039612E+00
+------------------------------------------------------------------------------------------------------------------------------
+H2        Total     7.0521348233E-01  5.2584704990E-01  4.8865691131E-01 -3.7190138588E-02  1.4876055435E-01 -1.0145039612E+00
+ 
+H3        O1        7.0522064513E-01  5.2585289447E-01  4.8866057276E-01 -3.7192321710E-02  1.4876928684E-01 -1.0145134672E+00
+------------------------------------------------------------------------------------------------------------------------------
+H3        Total     7.0522064513E-01  5.2585289447E-01  4.8866057276E-01 -3.7192321710E-02  1.4876928684E-01 -1.0145134672E+00
+ 
+O4        H6        6.9963052823E-01  5.3290552928E-01  4.6636249273E-01 -6.6543036546E-02  2.6617214618E-01 -9.9926802202E-01
+O4        H5        7.2925516155E-01  5.4139135517E-01  4.9792784113E-01 -4.3463514036E-02  1.7385405614E-01 -1.0393191963E+00
+------------------------------------------------------------------------------------------------------------------------------
+O4        Total     1.4288856898E+00  1.0742968845E+00  9.6429033386E-01 -1.1000655058E-01  4.4002620232E-01 -2.0385872183E+00
+ 
+H5        O4        7.2925516155E-01  5.4139135517E-01  4.9792784113E-01 -4.3463514036E-02  1.7385405614E-01 -1.0393191963E+00
+------------------------------------------------------------------------------------------------------------------------------
+H5        Total     7.2925516155E-01  5.4139135517E-01  4.9792784113E-01 -4.3463514036E-02  1.7385405614E-01 -1.0393191963E+00
+ 
+H6        O1        1.5900618685E-01  1.3021492902E-01 -1.6962679395E-02 -1.4717760842E-01  5.8871043368E-01 -1.1325224963E-01
+H6        O4        6.9963052823E-01  5.3290552928E-01  4.6636249273E-01 -6.6543036546E-02  2.6617214618E-01 -9.9926802202E-01
+------------------------------------------------------------------------------------------------------------------------------
+H6        Total     8.5863671508E-01  6.6312045830E-01  4.4939981334E-01 -2.1372064497E-01  8.5488257986E-01 -1.1125202717E+00
+ 
+------------------------------------------------------------------------------------------------------------------------------
+Total     Total     5.9966520082E+00  4.5124235157E+00  3.8492902771E+00 -6.6313323860E-01  2.6525329544E+00 -8.3617137927E+00
+ 
+ 
+IsoDensity Surface Data:
+-----------------------
+  IDS = IsoDensity Surface = Isosurface of the Electron Density Distribution
+  Area_IDS(A) = Surface Area of Atom A's Part of IDS
+  ESP = Total Electrostatic Potential
+  ESP_Int_IDS(A) = Surface Integral of ESP Over Atom A's Part of IDS
+  ESP_Max_IDS(A) = Maximum Value of ESP on Atom A's Part of IDS
+  ESP_Min_IDS(A) = Minimum Value of ESP on Atom A's Part of IDS
+  ESP_Avg_IDS(A) = Average Value of ESP on Atom A's Part of IDS
+  ESP_MAD_IDS(A) = Mean Absolute Deviation of ESP on Atom A's Part of IDS
+  ESP_Var_IDS(A) = Variance of ESP on Atom A's Part of IDS
+  |ESP|_Int_IDS(A) = Surface Integral of |ESP| Over Atom A's Part of IDS
+  ESP*ESP_Int_IDS(A) = Surface Integral of ESP*ESP Over Atom A's Part of IDS
+  Area_ESP+_IDS(A) = Surface Area of Positive ESP Regions of Atom A's Part of IDS
+  ESP+_Int_IDS(A) = Surface Integral of ESP Over Positive ESP Regions of Atom A's Part of IDS
+  Area_ESP-_IDS(A) = Surface Area of Negative ESP Regions of Atom A's Part of IDS
+  ESP-_Int_IDS(A) = Surface Integral of ESP Over Negative ESP Regions of Atom A's Part of IDS
+  ESP+_Min_IDS(A) = Minimum Value of ESP on Positive ESP Regions of Atom A's Part of IDS
+  ESP+_Avg_IDS(A) = Average Value of ESP on Positive ESP Regions of Atom A's Part of IDS
+  ESP+_MAD_IDS(A) = Mean Absolute Deviation of ESP on Positive ESP Regions of Atom A's Part of IDS
+  ESP+_Var_IDS(A) = Variance of ESP on Positive ESP Regions of Atom A's Part of IDS
+  ESP+*ESP+_Int_IDS(A) = Surface Integral of ESP*ESP Over Positive Regions of Atom A's Part of IDS
+  ESP-_Min_IDS(A) = Minimum Value of ESP on Negative ESP Regions of Atom A's Part of IDS
+  ESP-_Avg_IDS(A) = Average Value of ESP on Negative ESP Regions of Atom A's Part of IDS
+  ESP-_MAD_IDS(A) = Mean Absolute Deviation of ESP on Negative ESP Regions of Atom A's Part of IDS
+  ESP-_Var_IDS(A) = Variance of ESP on Negative ESP Regions of Atom A's Part of IDS
+  ESP-*ESP-_Int_IDS(A) = Surface Integral of ESP*ESP Over Negative Regions of Atom A's Part of IDS
+
+0.0004 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------------------------------------------
+Atom A       Area_IDS(A)     ESP_Int_IDS(A)    ESP_Max_IDS(A)    ESP_Min_IDS(A)    ESP_Avg_IDS(A)    ESP_MAD_IDS(A)    ESP_Var_IDS(A)
+--------------------------------------------------------------------------------------------------------------------------------------
+O1        1.1261463949E+02
+H2        2.7517089538E+01
+H3        2.7577393936E+01
+O4        1.3733607905E+02
+H5        2.9638263281E+01
+H6        2.0788450032E+00
+--------------------------------------------------------------------------------------------------------------------------------------
+Total     3.3676231030E+02
+ 
+0.001 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------------------------------------------
+Atom A       Area_IDS(A)     ESP_Int_IDS(A)    ESP_Max_IDS(A)    ESP_Min_IDS(A)    ESP_Avg_IDS(A)    ESP_MAD_IDS(A)    ESP_Var_IDS(A)
+--------------------------------------------------------------------------------------------------------------------------------------
+O1        9.7132790884E+01  7.7854978283E-01  6.9639132922E-02 -3.4357064334E-02  8.0153136315E-03  2.1855418868E-02  6.9073074367E-04
+H2        2.1967075857E+01  1.5232540132E+00  8.8188345498E-02  4.1145632399E-02  6.9342593578E-02  1.0226982162E-02  1.4657953877E-04
+H3        2.2341211289E+01  1.5416329907E+00  8.8211850683E-02  4.1344386764E-02  6.9004002102E-02  1.0428782704E-02  1.5320374909E-04
+O4        1.1617237618E+02 -4.1325671577E+00  2.7553975106E-02 -7.2010561278E-02 -3.5572717831E-02  2.2119906726E-02  6.6595023092E-04
+H5        2.3528248945E+01  8.2115062554E-01  5.4798507914E-02  9.4231656937E-03  3.4900626369E-02  1.0348633880E-02  1.4929384987E-04
+H6        3.4733863437E+00 -6.3514343106E-04  9.2595350021E-03 -1.0945177913E-02 -1.8286000123E-04  3.4021479130E-03  2.1251460106E-05
+--------------------------------------------------------------------------------------------------------------------------------------
+Total     2.8461508950E+02  5.3138511114E-01  8.8211850683E-02 -7.2010561278E-02  1.8670307048E-03                    1.9240217248E-03
+ 
+0.001 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------------------------------
+Atom A     |ESP|_Int_IDS(A)  ESP*ESP_Int_IDS(A)  Area_ESP+_IDS(A)   ESP+_Int_IDS(A)    Area_ESP-_IDS(A)   ESP-_Int_IDS(A)
+--------------------------------------------------------------------------------------------------------------------------
+O1         2.1319025196E+00   7.3332925569E-02   5.5089719544E+01   1.4552261512E+00   4.2043071340E+01  -6.7667636839E-01
+H2         1.5232540132E+00   1.0884630780E-01   2.1967075857E+01   1.5232540132E+00   0.0000000000E+00         NULL      
+H3         1.5416329907E+00   1.0980160346E-01   2.2341211289E+01   1.5416329907E+00   0.0000000000E+00         NULL      
+O4         4.4080089443E+00   2.2437166617E-01   1.3513812540E+01   1.3772089332E-01   1.0265856364E+02  -4.2702880510E+00
+H5         8.2115062554E-01   3.2171294040E-02   2.3528248945E+01   8.2115062554E-01   0.0000000000E+00         NULL      
+H6         1.1849942709E-02   7.3930673644E-05   1.6306089786E+00   5.6073996388E-03   1.8427773650E+00  -6.2425430699E-03
+--------------------------------------------------------------------------------------------------------------------------
+Total      1.0437799036E+01   5.4859772771E-01   1.3807067715E+02   5.4845920736E+00   1.4654441234E+02  -4.9532069625E+00
+ 
+0.001 IsoDensity Surface:
+-----------------------------------------------------------------------------------------------------------
+Atom A     ESP+_Min_IDS(A)    ESP+_Avg_IDS(A)    ESP+_MAD_IDS(A)    ESP+_Var_IDS(A)    ESP+*ESP+_Int_IDS(A)
+-----------------------------------------------------------------------------------------------------------
+O1         1.6067315641E-05   2.6415566521E-02   1.5695094065E-02   3.5350781767E-04     5.7915269733E-02
+H2         4.1145632399E-02   6.9342593578E-02   1.0226982162E-02   1.4657953877E-04     1.0884630780E-01
+H3         4.1344386764E-02   6.9004002102E-02   1.0428782704E-02   1.5320374909E-04     1.0980160346E-01
+O4         1.8701449722E-05   1.0191120597E-02   5.7954305753E-03   4.7730779386E-05     2.0485550375E-03
+H5         9.4231656937E-03   3.4900626369E-02   1.0348633880E-02   1.4929384987E-04     3.2171294040E-02
+H6         9.5655468257E-07   3.4388377056E-03   2.1532338875E-03   6.3978450713E-06     2.9715320925E-05
+-----------------------------------------------------------------------------------------------------------
+Total      9.5655468257E-07   3.9723076519E-02                      6.7319054772E-04     3.1081274539E-01
+ 
+0.001 IsoDensity Surface:
+-----------------------------------------------------------------------------------------------------------
+Atom A     ESP-_Max_IDS(A)    ESP-_Avg_IDS(A)    ESP-_MAD_IDS(A)    ESP-_Var_IDS(A)    ESP-*ESP-_Int_IDS(A)
+-----------------------------------------------------------------------------------------------------------
+O1        -1.6004496517E-05  -1.6094836719E-02   9.1279938105E-03   1.0766720963E-04     1.5417655837E-02
+H2               NULL               NULL               NULL               NULL                 NULL      
+H3               NULL               NULL               NULL               NULL                 NULL      
+O4        -1.2537960443E-05  -4.1596997849E-02   1.8077021139E-02   4.3534554418E-04     2.2232311113E-01
+H5               NULL               NULL               NULL               NULL                 NULL      
+H6        -6.8173624217E-05  -3.3875731210E-03   3.0189746798E-03   1.2518214108E-05     4.4215352719E-05
+-----------------------------------------------------------------------------------------------------------
+Total     -1.2537960443E-05  -3.3800039750E-02                      4.8017108923E-04     2.3778498232E-01
+ 
+0.002 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------------------------------------------
+Atom A       Area_IDS(A)     ESP_Int_IDS(A)    ESP_Max_IDS(A)    ESP_Min_IDS(A)    ESP_Avg_IDS(A)    ESP_MAD_IDS(A)    ESP_Var_IDS(A)
+--------------------------------------------------------------------------------------------------------------------------------------
+O1        8.6280976147E+01
+H2        1.8442082001E+01
+H3        1.8446008721E+01
+O4        1.0015907865E+02
+H5        1.9599071718E+01
+H6        4.8590104482E+00
+--------------------------------------------------------------------------------------------------------------------------------------
+Total     2.4778622769E+02
+ 
+ 
+Atomic Surface Area and Volume Data:
+-----------------------------------
+  Area(A) = Area_IAS(A|Total) + Area_IDS(A)
+  Vol(A) = Volume Bounded by Interatomic Surfaces (IASs) of Atom A and by an
+           Isosurface of the Electron Density Distribution (IsoDensity Surface)
+  N(Vol(A)) = Average Number of Electrons in Vol(A)
+  N(Vol(A))/Vol(A) = Average Electron Density in Vol(A)
+  %N(Vol(A)) = 100 * N(Vol(A)) / N(A)
+             = Percentage of Atom A's Electron Population in Vol(A)
+ 
+IASs and 0.0004 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------
+Atom A         Area(A)           Vol(A)          N(Vol(A))      N(Vol(A))/Vol(A)     %N(Vol(A))
+--------------------------------------------------------------------------------------------------
+O1        1.9875499805E+02  1.8627186197E+02  9.1505340709E+00  4.9124618041E-02  9.9717717118E+01
+H2        5.4466140731E+01  3.0419857466E+01  3.9382114235E-01  1.2946186312E-02  9.8434095286E+01
+H3        5.4526502267E+01  3.0380593873E+01  3.9381455773E-01  1.2962701104E-02  9.8430142243E+01
+O4        1.9984599407E+02  2.0821793007E+02  9.1801645839E+00  4.4089212590E-02  9.9633743918E+01
+H5        5.7710049485E+01  3.3051719415E+01  4.2080762436E-01  1.2731792228E-02  9.8424017375E+01
+H6        6.8759172859E+01  1.6316329874E+01  3.8151986925E-01  2.3382701391E-02  9.9895342207E+01
+--------------------------------------------------------------------------------------------------
+Total     6.3406285747E+02  5.0465829267E+02  1.9920661848E+01  3.9473564861E-02  9.9603331542E+01
+ 
+IASs and 0.001 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------
+Atom A         Area(A)           Vol(A)          N(Vol(A))      N(Vol(A))/Vol(A)     %N(Vol(A))
+--------------------------------------------------------------------------------------------------
+O1        1.6112023377E+02  1.4353348100E+02  9.1229429343E+00  6.3559685664E-02  9.9417043394E+01
+H2        4.2748572001E+01  2.1076174874E+01  3.8785416318E-01  1.8402493123E-02  9.6942671558E+01
+H3        4.3122743484E+01  2.1070197588E+01  3.8785078656E-01  1.8407553367E-02  9.6939555283E+01
+O4        1.6240642246E+02  1.5537081526E+02  9.1460969867E+00  5.8866248282E-02  9.9264003024E+01
+H5        4.5131711365E+01  2.2762611210E+01  4.1423068789E-01  1.8197854546E-02  9.6885717040E+01
+H6        5.0528384751E+01  1.4879907872E+01  3.8054455710E-01  2.5574389330E-02  9.9639971127E+01
+--------------------------------------------------------------------------------------------------
+Total     5.0505806783E+02  3.7869318780E+02  1.9839520116E+01  5.2389429635E-02  9.9197622787E+01
+ 
+IASs and 0.002 IsoDensity Surface:
+--------------------------------------------------------------------------------------------------
+Atom A         Area(A)           Vol(A)          N(Vol(A))      N(Vol(A))/Vol(A)     %N(Vol(A))
+--------------------------------------------------------------------------------------------------
+O1        1.3610279756E+02  1.1540392085E+02  9.0827993492E+00  7.8704426003E-02  9.8979579675E+01
+H2        3.5229170971E+01  1.5827346402E+01  3.8043900095E-01  2.4036815223E-02  9.5089279988E+01
+H3        3.5233123015E+01  1.5827515980E+01  3.8044769491E-01  2.4037106984E-02  9.5089224080E+01
+O4        1.3617022754E+02  1.2231277133E+02  9.0992226446E+00  7.4393070694E-02  9.8755268551E+01
+H5        3.6988248314E+01  1.6964037024E+01  4.0603595262E-01  2.3935101771E-02  9.4969024661E+01
+H6        3.9728600890E+01  1.3264472947E+01  3.7817086721E-01  2.8510056052E-02  9.9018455492E+01
+--------------------------------------------------------------------------------------------------
+Total     4.1945216829E+02  2.9960006453E+02  1.9727115509E+01  6.5844830642E-02  9.8635599630E+01
+ 
+Bond Contributions to Atomic Net Charges:
+----------------------------------------
+  q(A|B) = Contribution of Bond Between Atom A and Atom B to q(A)
+  q(A)* = Sum of q(A|B) Over all B
+  q(A) = Net Charge of Atom A
+------------------------------------------------------------------------
+Atom A    Atom B         q(A|B)            q(A)*             q(A)
+------------------------------------------------------------------------
+O1        H2       -5.9991307625E-01
+O1        H3       -5.9990369807E-01
+O1        H6        2.3378783838E-02
+O1                                   -1.1764379905E+00 -1.1764375834E+00
+H2        O1        5.9991348332E-01
+H2                                    5.9991348332E-01  5.9991389040E-01
+H3        O1        5.9990410514E-01
+H3                                    5.9990410514E-01  5.9990451222E-01
+O4        H6       -6.4145798476E-01
+O4        H5       -5.7245351602E-01
+O4                                   -1.2139115008E+00 -1.2139110937E+00
+H5        O4        5.7245392309E-01
+H5                                    5.7245392309E-01  5.7245433017E-01
+H6        O1       -2.3378376762E-02
+H6        O4        6.4145839184E-01
+H6                                    6.1808001507E-01  6.1808042215E-01
+ 
+Atomic Dipole Moments:
+---------------------
+  Mu_Intra(A) = Intraatomic Dipole Moment Contribution of Atom A
+  Mu_Bond(A) = Bonding Dipole Moment Contribution of Atom A
+  Mu(A) = Mu_Intra(A) + Mu_Bond(A)
+        = Total Dipole Moment Contribution of Atom A
+
+Atom A     Mu_Intra_X(A)     Mu_Bond_X(A)        Mu_X(A)
+-------------------------------------------------------------
+O1      -1.0052716104E-01  4.6907628720E-01  3.6854912616E-01
+H2      -1.4104220168E-01  1.8783538005E-01  4.6793178371E-02
+H3       5.0140164644E-02 -7.6132216147E-02 -2.5992051503E-02
+O4       1.1297829697E-01 -6.2912520322E-01 -5.1614690625E-01
+H5       1.0285621541E-01 -1.1865996506E-01 -1.5803749650E-02
+H6       2.3679256929E-02 -3.3669519844E-02 -9.9902629154E-03
+-------------------------------------------------------------
+Total    4.8084571233E-02 -2.0067523702E-01 -1.5259066579E-01
+ 
+Atom A     Mu_Intra_Y(A)     Mu_Bond_Y(A)        Mu_Y(A)
+-------------------------------------------------------------
+O1      -1.1294272065E-01  5.2818260378E-01  4.1523988313E-01
+H2       3.2291897216E-02 -5.2376386913E-02 -2.0084489697E-02
+H3      -1.3478357147E-01  1.7830219722E-01  4.3518625753E-02
+O4       1.3027707347E-01 -7.2582773993E-01 -5.9555066646E-01
+H5       1.1706506720E-01 -1.3492987992E-01 -1.7864812717E-02
+H6       2.8267382594E-02 -4.1018895867E-02 -1.2751513273E-02
+-------------------------------------------------------------
+Total    6.0175128360E-02 -2.4766810162E-01 -1.8749297326E-01
+ 
+Atom A     Mu_Intra_Z(A)     Mu_Bond_Z(A)        Mu_Z(A)
+-------------------------------------------------------------
+O1       2.1356367985E-01 -8.4395067715E-01 -6.3038699730E-01
+H2       7.5591765100E-02 -9.2343133848E-02 -1.6751368748E-02
+H3       7.7283630066E-02 -9.4677894498E-02 -1.7394264432E-02
+O4       8.9438101849E-02 -5.0991618783E-01 -4.2047808598E-01
+H5      -8.2564974803E-02  1.0909929659E-01  2.6534321782E-02
+H6       1.2915627788E-01 -2.5053838905E-01 -1.2138211117E-01
+-------------------------------------------------------------
+Total    5.0246847994E-01 -1.6823269858E+00 -1.1798585058E+00
+ 
+Atom A     |Mu_Intra(A)|     |Mu_Bond(A)|        |Mu(A)|
+-------------------------------------------------------------
+O1       2.6167004721E-01  1.1005735648E+00  8.4002403852E-01
+H2       1.6324761631E-01  2.1576067824E-01  5.3605938322E-02
+H3       1.6325871103E-01  2.1575841021E-01  5.3591211629E-02
+O4       1.9425597937E-01  1.0874920450E+00  8.9324691208E-01
+H5       1.7635363924E-01  2.1021159891E-01  3.5678849040E-02
+H6       1.3431714798E-01  2.5609699485E-01  1.2245825148E-01
+-------------------------------------------------------------
+Total    5.0833821949E-01  1.7122599471E+00  1.2043685566E+00
+
+Bond Contributions to Atomic Dipole Moments:
+-------------------------------------------
+  Mu_Bond(A|B) = Contribution of Bond Between Atom A and Atom B to Mu_Bond(A)
+  Mu_Bond(A) = Sum of Mu_Bond(A|B) Over All B
+             = Total Bonding Dipole Moment Contribution of Atom A
+ 
+Atom A    Atom B     Mu_Bond_X(A|B)     Mu_Bond_X(A)
+------------------------------------------------------
+O1        H2        7.6387918578E-01
+O1        H3       -2.8989426566E-01
+O1        H6       -4.9086329192E-03
+O1                                    4.6907628720E-01
+H2        O1        1.8783538005E-01
+H2                                    1.8783538005E-01
+H3        O1       -7.6132216147E-02
+H3                                   -7.6132216147E-02
+O4        H6       -1.5182100502E-01
+O4        H5       -4.7730419820E-01
+O4                                   -6.2912520322E-01
+H5        O4       -1.1865996506E-01
+H5                                   -1.1865996506E-01
+H6        O1       -1.9984911004E-03
+H6        O4       -3.1671028744E-02
+H6                                   -3.3669519844E-02
+ 
+Atom A    Atom B     Mu_Bond_Y(A|B)     Mu_Bond_Y(A)
+------------------------------------------------------
+O1        H2       -1.9325301243E-01
+O1        H3        7.2762295454E-01
+O1        H6       -6.1873383307E-03
+O1                                    5.2818260378E-01
+H2        O1       -5.2376386913E-02
+H2                                   -5.2376386913E-02
+H3        O1        1.7830219722E-01
+H3                                    1.7830219722E-01
+O4        H6       -1.8283587620E-01
+O4        H5       -5.4299186372E-01
+O4                                   -7.2582773993E-01
+H5        O4       -1.3492987992E-01
+H5                                   -1.3492987992E-01
+H6        O1       -2.6027260305E-03
+H6        O4       -3.8416169837E-02
+H6                                   -4.1018895867E-02
+ 
+Atom A    Atom B     Mu_Bond_Z(A|B)     Mu_Bond_Z(A)
+------------------------------------------------------
+O1        H2       -3.9007432347E-01
+O1        H3       -3.9939352697E-01
+O1        H6       -5.4482826707E-02
+O1                                   -8.4395067715E-01
+H2        O1       -9.2343133848E-02
+H2                                   -9.2343133848E-02
+H3        O1       -9.4677894498E-02
+H3                                   -9.4677894498E-02
+O4        H6       -9.2334979619E-01
+O4        H5        4.1343360836E-01
+O4                                   -5.0991618783E-01
+H5        O4        1.0909929659E-01
+H5                                    1.0909929659E-01
+H6        O1       -2.9565648043E-02
+H6        O4       -2.2097274100E-01
+H6                                   -2.5053838905E-01
+ 
+Atom A    Atom B     |Mu_Bond(A|B)|     |Mu_Bond(A)|
+------------------------------------------------------
+O1        H2        8.7921335016E-01
+O1        H3        8.7919795190E-01
+O1        H6        5.5052304572E-02
+O1                                    1.1005735648E+00
+H2        O1        2.1576067824E-01
+H2                                    2.1576067824E-01
+H3        O1        2.1575841021E-01
+H3                                    2.1575841021E-01
+O4        H6        9.5344293029E-01
+O4        H5        8.3281859382E-01
+O4                                    1.0874920450E+00
+H5        O4        2.1021159891E-01
+H5                                    2.1021159891E-01
+H6        O1        2.9747196400E-02
+H6        O4        2.2651226994E-01
+H6                                    2.5609699485E-01
+ 
+Atomic Traceless Quadrupole Moment Tensors:
+------------------------------------------
+  Q(A) = Traceless Form of Quadrupole Moment Tensor of Atom A's Electronic Charge
+         Density Distribution, Using the Nucleus of Atom A as Origin
+  Q_XX(A) = -[3<Rho*x*x>(A) - <Rho*r*r>(A)]
+  Q_XY(A) = -3<Rho*x*y>(A)
+  Q_XZ(A) = -3<Rho*x*z>(A)
+  Q_YY(A) = -[3<Rho*y*y>(A) - <Rho*r*r>(A)]
+  Q_YZ(A) = -3<Rho*y*z>(A)
+  Q_ZZ(A) = -[3<Rho*z*z>(A) - <Rho*r*r>(A)]
+--------------------------------------------------------------------------------------------------------------------
+Atom A        Q_XX(A)           Q_XY(A)           Q_XZ(A)           Q_YY(A)           Q_YZ(A)           Q_ZZ(A)
+--------------------------------------------------------------------------------------------------------------------
+O1        1.4716031496E-01 -9.9118716866E-01 -3.4235860641E-01 -1.2916144705E-01 -4.0241714270E-01 -1.7998867911E-02
+H2       -2.6061774373E-02 -3.6904113734E-04  3.8684214841E-02  2.7510543914E-02  6.7803502468E-04 -1.4487695408E-03
+H3        2.6745050741E-02  6.3301171577E-03 -4.3084588386E-03 -2.4507490860E-02  3.8720357145E-02 -2.2375598806E-03
+O4       -6.6516383566E-01  8.7631555321E-01 -3.8947209818E-01 -4.3282615674E-01 -4.2162071737E-01  1.0979899924E+00
+H5       -7.3348787822E-03 -3.9315211560E-02  1.0700564928E-02 -1.7877366688E-02  1.2203599659E-02  2.5212245470E-02
+H6       -4.2120898697E-02 -4.4807570150E-03  2.5765817802E-03 -4.3267705604E-02  4.4980521425E-03  8.5388604300E-02
+ 
+Eigenvalues and Eigenvectors of Atomic Traceless Quadrupole Moment Tensors:
+--------------------------------------------------------------------------
+  Q_EigVal_n(A) = nth Eigenvalue of Q(A)
+  Q_EigVec_n_X(A) = X Component of the nth Eigenvector of Q(A)
+  Q_EigVec_n_Y(A) = Y Component of the nth Eigenvector of Q(A)
+  Q_EigVec_n_Z(A) = Z Component of the nth Eigenvector of Q(A)
+--------------------------------------------------------------------------------------------
+Atom A        n        Q_EigVal_n(A)    Q_EigVec_n_X(A)   Q_EigVec_n_Y(A)   Q_EigVec_n_Z(A)
+------------------------------------------------------------------------------------------------
+O1            1      -1.2233380732E+00  6.0045939200E-01  6.9158509086E-01  4.0144561358E-01
+O1            2       2.1352918321E-01 -2.6868359738E-01 -2.9834913739E-01  9.1585856807E-01
+O1            3       1.0098088900E+00  7.5316508353E-01 -6.5779773056E-01  6.6710284639E-03
+H2            1      -5.4355787455E-02  8.0715417352E-01  8.5273517400E-03 -5.9027910724E-01
+H2            2       2.6705453365E-02  5.4948922701E-01 -3.7634265365E-01  7.4594087999E-01
+H2            3       2.7650334090E-02  2.1578630535E-01  9.2644130484E-01  3.0845223148E-01
+H3            1      -5.4383233623E-02 -9.3862200762E-02  7.9559286123E-01 -5.9851640448E-01
+H3            2       2.6735607416E-02 -4.4410198847E-01  5.0458743036E-01  7.4038162387E-01
+H3            3       2.7647626207E-02  8.9104618910E-01  3.3529617398E-01  3.0596268500E-01
+O4            1      -1.4330740138E+00  7.5349395325E-01 -6.5742336653E-01  6.4326937135E-03
+O4            2       2.7488849318E-02  5.7717799739E-01  6.6614400694E-01  4.7235338609E-01
+O4            3       1.4055851645E+00 -3.1482125364E-01 -3.5220261094E-01  8.8138578336E-01
+H5            1      -5.5535512069E-02  6.4557092286E-01  7.3783808952E-01 -1.9706125245E-01
+H5            2       2.7060668395E-02  7.5091418218E-01 -6.6028600210E-01 -1.2259136281E-02
+H5            3       2.8474843674E-02  1.3916204424E-01  1.4006194730E-01  9.8031452930E-01
+H6            1      -4.7406011862E-02  6.5698767126E-01  7.5293032543E-01 -3.8250815235E-02
+H6            2      -3.8185523373E-02  7.5366289794E-01 -6.5720991001E-01  8.2079507393E-03
+H6            3       8.5591535235E-02  1.8958799817E-02  3.4220742701E-02  9.9923445931E-01
+ 
+Atomic Radial Moments:
+---------------------
+  R-2(A) = <Rho/(r*r)>(A)
+  R-1(A) = <Rho/r>(A)
+  R0(A)  = <Rho>(A) = N(A)
+  R+1(A) = <Rho*r>(A)
+  R+2(A) = <Rho*r*r>(A)
+--------------------------------------------------------------------------------------------------
+Atom A         R-2(A)            R-1(A)            R0(A)             R+1(A)            R+2(A)
+--------------------------------------------------------------------------------------------------
+O1        2.5523892777E+02  2.3032382189E+01  9.1764375834E+00  9.5369731134E+00  1.4888357580E+01
+H2        2.1297086832E+00  6.7263597400E-01  4.0008610960E-01  3.7224743070E-01  4.9484958646E-01
+H3        2.1297328269E+00  6.7264748683E-01  4.0009548778E-01  3.7226135971E-01  4.9488422404E-01
+O4        2.5525405428E+02  2.3040503590E+01  9.2139110937E+00  9.6818961958E+00  1.5439795338E+01
+H5        2.1973608543E+00  7.0539103769E-01  4.2754566983E-01  4.0608516421E-01  5.5139665369E-01
+H6        2.0580982614E+00  6.4989867023E-01  3.8191957785E-01  3.3705845831E-01  3.9878665072E-01
+ 
+Atomic Radial Distortion Moments:
+--------------------------------
+  Dot = x*(dRho/dx) + y*(dRho/dy) + z*(dRho/dz)
+  GR-2(A) = <Dot/(r*r)>(A)
+  GR-1(A) = <Dot/r>(A)
+  GR0(A)  = <Dot>(A)
+  GR+1(A) = <Dot*r>(A)
+  GR+2(A) = <Dot*r*r>(A)
+--------------------------------------------------------------------------------------------------
+Atom A        GR-2(A)           GR-1(A)            GR0(A)           GR+1(A)           GR+2(A)
+--------------------------------------------------------------------------------------------------
+O1       -2.5467393818E+02 -4.5016870234E+01 -2.5487272353E+01 -3.3911878488E+01 -6.4952179597E+01
+H2       -1.3780690374E+00 -9.0132786995E-01 -8.8285153202E-01 -1.1938825554E+00 -2.0998019734E+00
+H3       -1.3780967796E+00 -9.0134930739E-01 -8.8288251082E-01 -1.1939585266E+00 -2.1000356368E+00
+O4       -2.5473115483E+02 -4.5140658410E+01 -2.5883693834E+01 -3.5261135238E+01 -6.9842673904E+01
+H5       -1.4351424220E+00 -9.5264311384E-01 -9.5002337800E-01 -1.3110834266E+00 -2.3551344693E+00
+H6       -1.2601901667E+00 -7.6587315481E-01 -6.6393550524E-01 -7.5602042739E-01 -1.0714633348E+00
+ 
+Atomic Electronic Spin Populations:
+----------------------------------
+  N_alpha(A) = Average number of Alpha electrons in Atom A
+  N_beta(A) = Average number of Beta electrons in Atom A
+  N_total(A) = N_alpha(A) + N_beta(A)
+  N_spin(A) = N_alpha(A) - N_beta(A)
+--------------------------------------------------------------------------------
+Atom A       N_alpha(A)        N_beta(A)         N_total(A)        N_spin(A)
+--------------------------------------------------------------------------------
+O1        4.5882187917E+00  4.5882187917E+00  9.1764375834E+00  0.0000000000E+00
+H2        2.0004305480E-01  2.0004305480E-01  4.0008610960E-01  0.0000000000E+00
+H3        2.0004774389E-01  2.0004774389E-01  4.0009548778E-01  0.0000000000E+00
+O4        4.6069555469E+00  4.6069555469E+00  9.2139110937E+00  0.0000000000E+00
+H5        2.1377283492E-01  2.1377283492E-01  4.2754566983E-01  0.0000000000E+00
+H6        1.9095978893E-01  1.9095978893E-01  3.8191957785E-01  0.0000000000E+00
+--------------------------------------------------------------------------------
+Total     9.9999977611E+00  9.9999977611E+00  1.9999995522E+01  0.0000000000E+00
+ 
+
+2EDM Note:
+---------
+For post-HF, natural orbital "wavefunctions" the Muller approximation
+of the two-electron density matrix (2EDM) in terms of natural orbitals
+of the one-electron density matrix (1EDM) is used to calculate 2EDM-
+dependent properties (i.e., Vee contributions and electronic localization
+and delocalization properties).  For HF single-determinant wavefunctions the
+expression used for the 2EDM is exact.
+
+DFT Note:
+--------
+VeeX represents the exchange-correlation functional for the wavefunction's
+underlying model.  For Hartree-Fock wavefunctions, VeeX is the two-electron
+Hartree-Fock exchange functional.  For wavefunctions of supported DFT models
+(LSDA, B3LYP, M062X, PBE and PBE0), VeeX is the exchange-correlation functional
+of the corresponding DFT model and atomic contributions VeeX(A) to VeeX are
+explicitly calculated and unambiguous.  However, since VeeX is at least partly
+just a one-electron functional for DFT models, the partitioning of VeeX(A)
+into interatomic (VeeX(A,B) and VeeX(A,A')) and intraatomic (VeeX(A,A))
+contributions is ambiguous.  Currently, interatomic contributions VeeX(A,B)
+and VeeX(A,A') are calculated using the Hartree-Fock exchange functional while
+the intratomic contribution VeeX(A,A) is calculated as VeeX(A) - VeeX(A,A').
+For wavefunctions of non-supported DFT models, VeeX is (incorrectly) assumed
+to be the Hartree-Fock exchange functional and the atomic energies E_IQA(A)
+will not be correct and will not sum to the correct molecular energy.
+
+Total time for AIMSum = 0 sec (NProc = 6)                                       
