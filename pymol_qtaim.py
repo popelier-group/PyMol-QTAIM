@@ -1,16 +1,11 @@
-from cmath import cos
-from turtle import position
-from venv import create
-from xdrlib import ConversionError
-from pymol import cgo
 from pymol import cmd
 from pymol.cgo import *
-import matplotlib.pyplot as plt
 import numpy as np
 import math as m
 from typing import List, Dict, Union, Optional, Tuple
 from pathlib import Path
-
+from enum import Enum
+from dataclasses import dataclass
 
 def unit_vector(vector: np.array) -> np.array:
     """unit_vector generates a unit vector given any numpy array
@@ -29,11 +24,6 @@ def closestNumber(n, m):
         return int(n - q)
     else:
         return n
-
-
-from enum import Enum
-
-
 class CriticalPointType(Enum):
     BondCriticalPoint = "BCP"
     RingCriticalPoint = "RCP"
@@ -47,10 +37,6 @@ class CriticalPoint:
         self.rho = rho
         self.other_atoms = other_atoms
 
-
-from collections import namedtuple
-from dataclasses import dataclass
-
 @dataclass
 class Nuclei:
     atomic_number: float
@@ -61,10 +47,6 @@ class Nuclei:
     @property
     def coordinates(self) -> np.ndarray:
         return np.array([self.x, self.y, self.z])
-
-
-# Nuclei = namedtuple("Nuclei", "atomic_number x y z")
-
 
 class GradientPath:
     def __init__(self, idx: int, npoints: int, fuck_knows: float) -> None:
@@ -228,8 +210,12 @@ def create_obj_points(coords, colors, define_normals=False):
     obj.append(END)
     return obj
 
-
 def create_obj_wrapper(coords,colors,meshtype='POINTS',define_normals=False):
+    '''
+    Function that wraps around cgo create objects functions. 
+    
+    NOTE: ONLY WORKS FOR POINTS (DEFAULT) IN THIS VERSION.
+    '''
     if meshtype == 'DOT_LINES':
         obj = create_obj_dot_lines(coords,colors)
     elif meshtype == 'TRIANGLES':
@@ -238,8 +224,7 @@ def create_obj_wrapper(coords,colors,meshtype='POINTS',define_normals=False):
         obj = create_obj_points(coords,colors, define_normals)
     return obj
 
-
-def qtaim_visualise_iasviz(selection = "(all)", file = None, color=None, meshtype = 'POINTS', define_normals = False, rho = 0.00000, transparency = 0.0, *args, **kwargs):
+def qtaim_visualise_iasviz(selection = "(all)", file = None, color=None, meshtype = 'POINTS', define_normals = False, rho = 1e-3, transparency = 0.0, *args, **kwargs):
     pymol.color_list = []
     cmd.iterate(selection, 'pymol.color_list.append(color)')
     pymol.color_list = [cmd.get_color_tuple(color) for color in pymol.color_list]
@@ -247,9 +232,7 @@ def qtaim_visualise_iasviz(selection = "(all)", file = None, color=None, meshtyp
     iasviz = IasViz(file)
     point_color = np.array(iasviz.get_color(color, pymol.color_list))
     #Time to create the mesh object for the iasviz
-
-    rho = 1e-3
-
+    rho = float(rho)
     ias_viz_points = iasviz.ias_points
     ias_viz_points = ias_viz_points[iasviz.ias_rho > rho]
     iso_surface_points = iasviz.iso_density_surface_for_rho(rho)
@@ -269,7 +252,6 @@ def qtaim_visualise_iasviz(selection = "(all)", file = None, color=None, meshtyp
     v = cmd.get_view()
     cmd.set('cgo_transparency', transparency, grouped_name)
     cmd.set_view(v)
-
 
 def qtaim_visualiser(selection = "(all)", file = None, *args, **kwargs):
     file = Path(file)
