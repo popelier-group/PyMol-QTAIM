@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the PyMol-QTAIM plugin, please cite it as below."
+authors:
+- family-names: "Falcioni"
+  given-names: "Fabio"
+  orcid: "https://orcid.org/0000-0003-4041-6695"
+- family-names: "Burn J."
+  given-names: "Matthew"
+title: "PyMol-QTAIM visualiser"
+version: 0.1
+date-released: 2023-05-24
+url: "https://github.com/popelier-group/PyMol-QTAIM"
