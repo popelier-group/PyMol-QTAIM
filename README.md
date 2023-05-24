@@ -26,6 +26,19 @@ The variables to the main `qtaim_visualiser` functions are:
 
 Note: in the current version some functionalities are missing and will be updated soon.
 
+# Example images
+
+Some example AIMAll output files for testing are put in the `tests` folder.
+Here are some images generated with the PyMol-QTAIM visualiser and ray tracing functionality of PyMol.
+
+| ![alt text](https://github.com/popelier-group/PyMol-QTAIM/blob/main/iasmesh_points_imidazole.png) |
+| :-----------------------------------------------------------------------------------------------: |
+|       <b>Figure showing an imidazole QTAIM interatomic surfaces and isodensity surfaces</b>       |
+
+| ![alt text](https://github.com/popelier-group/PyMol-QTAIM/blob/main/iasmesh_points_water.png) |
+| :-------------------------------------------------------------------------------------------: |
+|     <b>Figure showing an imidazole QTAIM interatomic surfaces and isodensity surfaces</b>     |
+
 # To do
 
 - Add a QTWidget in PyMol GUI.
