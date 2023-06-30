@@ -1,3 +1,4 @@
+import pymol
 from pymol import cmd
 from pymol.cgo import *
 import numpy as np
