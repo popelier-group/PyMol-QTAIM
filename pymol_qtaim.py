@@ -266,3 +266,6 @@ def qtaim_visualiser(selection = "(all)", file = None, *args, **kwargs):
         qtaim_visualise_iasviz(selection, f, *args, **kwargs)
     
 cmd.extend('qtaim_visualiser',qtaim_visualiser)
+
+# tab-completion of arguments
+cmd.auto_arg[0]["qtaim_visualiser"] = [cmd.object_sc, "selection=", ", "]
