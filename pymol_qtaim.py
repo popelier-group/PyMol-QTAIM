@@ -72,7 +72,7 @@ class InterAtomicSurface(list):
 
     @property
     def rho(self) -> np.ndarray:
-        return np.hstack(path.rho for path in self)
+        return np.hstack([path.rho for path in self])
 
 
 class IsoDensitySurface:
@@ -243,11 +243,11 @@ def qtaim_visualise_iasviz(selection = "(all)", file = None, color=None, meshtyp
     iso_surface_color = np.full(iso_surface_coords.shape, point_color)
     ias_obj = create_obj_wrapper(ias_coords,ias_color, meshtype, define_normals)
     iso_surface_obj = create_obj_wrapper(iso_surface_coords,iso_surface_color, meshtype, define_normals)
-    ias_name = f"{iasviz.atom_name}_ias"
-    iso_surface_name = f"{iasviz.atom_name}_iso"
+    ias_name = f"{iasviz.atom_name}_ias_{selection}"
+    iso_surface_name = f"{iasviz.atom_name}_iso_{selection}"
     cmd.load_cgo(ias_obj, ias_name)
     cmd.load_cgo(iso_surface_obj, iso_surface_name)
-    grouped_name = f"{iasviz.atom_name}_iasviz"
+    grouped_name = f"{iasviz.atom_name}_iasviz_{selection}"
     cmd.group(grouped_name, f"{ias_name} {iso_surface_name}")
     cmd.group(f"{selection}_iasviz", grouped_name)
     v = cmd.get_view()
