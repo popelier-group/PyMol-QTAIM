@@ -65,10 +65,10 @@ class Nuclei:
 
 
 class GradientPath:
-    def __init__(self, idx: int, npoints: int, fuck_knows: float) -> None:
+    def __init__(self, idx: int, npoints: int, unknown_value: float) -> None:
         self.idx = idx
         self.npoints = npoints
-        self.fuck_knows = fuck_knows  # TODO: rename
+        self.unknown_value = unknown_value
         self.points = np.empty((npoints, 4))
 
     @property
