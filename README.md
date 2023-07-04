@@ -42,7 +42,6 @@ Here are some images generated with the PyMol-QTAIM visualiser and ray tracing f
 # To do
 
 - Add a QTWidget in PyMol GUI.
-- Add auto-fill capabilities.
 
 # License
 
