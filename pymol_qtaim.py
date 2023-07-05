@@ -120,7 +120,7 @@ class IasViz:
 
     @property
     def ias_rho(self) -> np.ndarray:
-        return np.hstack(ias.rho for ias in self.inter_atomic_surfaces.values())
+        return np.hstack([ias.rho for ias in self.inter_atomic_surfaces.values()])
 
     @property
     def index(self) -> int:
@@ -281,12 +281,13 @@ def qtaim_visualise_iasviz(
     selection="(all)",
     file=None,
     color=None,
-    cp_color="blue",
+    cp_color="green",
     cp_radius=0.1,
+    transparency=0.0,
+    iso_rho=1e-3,
+    ias_rho=None,
     meshtype="POINTS",
     define_normals=False,
-    rho=1e-3,
-    transparency=0.0,
     *args,
     **kwargs,
 ):
@@ -298,22 +299,35 @@ def qtaim_visualise_iasviz(
     # plotting critical points and creating a group for critical points only
     grouped_cps = f"{selection}_CPs"
     atom_cps = f"{iasviz.atom_name}_CPs_{selection}"
-    for cp in iasviz.critical_points:
+    for i, cp in enumerate(iasviz.critical_points):
         cp_sphere = create_sphere_point(
             bohr_to_angstrom(cp.coordinates),
             color=np.array(iasviz.get_color(cp_color, pymol.color_list)),
             radius=float(cp_radius),
         )
-        cp_name = f"{cp.type.name}_{iasviz.atom_name}_{'_'.join([val for val in cp.other_atoms])}_{selection}"
+        if cp.type.value == "BCP":
+            cp_name = f"{cp.type.value}_{iasviz.atom_name}_{'_'.join([val for val in cp.other_atoms])}_{selection}"
+        else:
+            cp_name = f"{cp.type.value}_{iasviz.atom_name}_{i}_{selection}"
         cmd.load_cgo(cp_sphere, cp_name)
         cmd.group(atom_cps, cp_name)
     cmd.group(grouped_cps, atom_cps)
     # Time to create the mesh object for the iasviz
     point_color = np.array(iasviz.get_color(color, pymol.color_list))
-    rho = float(rho)
+    # Check if iso_rho is one of the three values available from aimall.iasviz output
+    iso_rho = float(iso_rho)
+    if iso_rho not in [1e-3, 2e-3, 4e-4]:
+        raise ValueError(
+            "IsoDensity Surfaces can only be visualized on 1e-3,2e-3 or 4e-4 a.u. of electron density"
+        )
+    # Set ias_rho equal to iso_rho is its value is None
+    ias_rho = iso_rho if not ias_rho else ias_rho
+    ias_rho = float(ias_rho)
+
+    # Plotting interatomic surfaces and isodensity surfaces
     ias_viz_points = iasviz.ias_points
-    ias_viz_points = ias_viz_points[iasviz.ias_rho > rho]
-    iso_surface_points = iasviz.iso_density_surface_for_rho(rho)
+    ias_viz_points = ias_viz_points[iasviz.ias_rho > ias_rho]
+    iso_surface_points = iasviz.iso_density_surface_for_rho(iso_rho)
     ias_coords = bohr_to_angstrom(ias_viz_points)
     iso_surface_coords = bohr_to_angstrom(iso_surface_points)
     ias_color = np.full(ias_coords.shape, point_color)
