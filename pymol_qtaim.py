@@ -291,6 +291,11 @@ def qtaim_visualise_iasviz(
     *args,
     **kwargs,
 ):
+    iso_rho = float(iso_rho)
+    if iso_rho not in [1e-3, 2e-3, 4e-4]:
+        raise ValueError(
+            "IsoDensity Surfaces can only be visualized on 1e-3,2e-3 or 4e-4 a.u. of electron density"
+        )
     pymol.color_list = []
     cmd.iterate(selection, "pymol.color_list.append(color)")
     pymol.color_list = [cmd.get_color_tuple(color) for color in pymol.color_list]
@@ -315,11 +320,7 @@ def qtaim_visualise_iasviz(
     # Time to create the mesh object for the iasviz
     point_color = np.array(iasviz.get_color(color, pymol.color_list))
     # Check if iso_rho is one of the three values available from aimall.iasviz output
-    iso_rho = float(iso_rho)
-    if iso_rho not in [1e-3, 2e-3, 4e-4]:
-        raise ValueError(
-            "IsoDensity Surfaces can only be visualized on 1e-3,2e-3 or 4e-4 a.u. of electron density"
-        )
+
     # Set ias_rho equal to iso_rho is its value is None
     ias_rho = iso_rho if not ias_rho else ias_rho
     ias_rho = float(ias_rho)
