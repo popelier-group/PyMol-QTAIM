@@ -13,7 +13,7 @@ Otherwise, simply type
   in the PyMol console to load it in the current PyMol session.
   These methods will add a function named `qtaim_visualiser` to the standard functions of PyMol.
 
-_Note_: To properly run the script you will need an initial object (e.g. xyz file of the geometry on which AIMAll was run) and the corresponding `_atomicfiles_` folder output from an AIMAll calculation with `-iaswrite=true`.
+_Note_: To properly run the script you will need an initial object (e.g. xyz file of the geometry on which AIMAll was run) and the corresponding `_atomicfiles_` folder output from an AIMAll calculation with `-iaswrite=true`. The files output from AIMAll for visualisation are named `.iasviz`. The only files that can be actually visualised are the ones obtained with the `-bim=proaim` parameters (i.e. basin integration method : ProAIM).
 
 ## Variables
 
