@@ -83,7 +83,7 @@ class GradientPath:
 class InterAtomicSurface(list):
     @property
     def points(self) -> np.ndarray:
-        return np.vstack(path.coords for path in self)
+        return np.vstack([path.coords for path in self])
 
     @property
     def rho(self) -> np.ndarray:
@@ -116,7 +116,7 @@ class IasViz:
 
     @property
     def ias_points(self) -> np.ndarray:
-        return np.vstack(ias.points for ias in self.inter_atomic_surfaces.values())
+        return np.vstack([ias.points for ias in self.inter_atomic_surfaces.values()])
 
     @property
     def ias_rho(self) -> np.ndarray:
