@@ -21,12 +21,11 @@ The variables to the main `qtaim_visualiser` functions are:
 
 1. **selection** : object/geometry uploaded in PyMol (geometry for which the AIMAll calculation was done is required).
 2. **file** : path to the .int file of a specific atom contained in an \_atomicfiles folder output from AIMAll. Note that if a path to the \_atomicfiles folder is passed directly then all the .iasviz files will be read automatically. Default is None.
-3. **color** : color in either normal text or HEX(#) form. The default colors are obtained directly from the selection object.
+3. **main_color** : color in either normal text (uses PIL library) or HEX(#) form. The default colors are obtained directly from the selection object.
 4. **cp_color** : color in either normal text or HEX(#) form. The default color for critical points is green.
-5. **cp_radius** : radius for the critical points spheres. The default is 0.1 Angstroms.
-6. **transparency** : default is 0.0. Any integer between 0 and 1 will set some transparency on the QTAIM objects.
-7. **iso_rho** : IsoDensity Surface electron density cut-off. Only three values are available from AIMAll (1e-3,2e-3,4e-4). Default is 1e-3.
-8. **ias_rho** : Interatomic Surface electron density cut-off. The lower the value (i.e. closer to zero) the longer the gradient paths shown. Default will be set depending on iso_rho. This value can be different than iso_rho.
+5. **iso_rho** : IsoDensity Surface electron density cut-off. Only three values are available from AIMAll (1e-3,2e-3,4e-4). Default is 1e-3.
+6. **ias_rho** : Interatomic Surface electron density cut-off. The lower the value (i.e. closer to zero) the longer the gradient paths shown. Default will be set depending on iso_rho. This value can be different than iso_rho.
+7. **transparency** : default is 0.0. Any integer between 0 and 1 will set some transparency on the QTAIM objects.
 
 Note: in the current version some functionalities are missing and will be updated soon.
 

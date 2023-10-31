@@ -31,12 +31,24 @@ def closestNumber(n, m):
 
 
 class CriticalPointType(Enum):
+    """Enum for critical point types."""
+
     BondCriticalPoint = "BCP"
     RingCriticalPoint = "RCP"
     CageCriticalPoint = "CCP"
 
 
 class CriticalPoint:
+    """
+    Class containing critical point information.
+    :param ty_: Type of critical point (BCP, RCP)
+    :parm x: The x coordinate of the critical point
+    :param y: The y coordinate of the critical point
+    :param z: The z coordinate of the critical point
+    :param rho: The electron density at the critical point, in electrons
+    :param other atoms: The atoms which the critical point connects.
+    """
+
     def __init__(
         self,
         ty_: CriticalPointType,
@@ -81,6 +93,8 @@ class GradientPath:
 
 
 class InterAtomicSurface(list):
+    """A list of `GradientPath` objects which form the interatomic surface."""
+
     @property
     def points(self) -> np.ndarray:
         return np.vstack([path.coords for path in self])
@@ -105,6 +119,12 @@ class IsoDensitySurface:
 
 
 class IasViz:
+    """
+    Class that handles .iasviz AIMAll files reading and stores the relevant information.
+
+    :path: A string or pathlib.Path object to a .iasviz file
+    """
+
     def __init__(self, path: Union[str, Path]):
         self.path = Path(path)
         self.atom_name: str = ""
@@ -120,10 +140,17 @@ class IasViz:
 
     @property
     def ias_rho(self) -> np.ndarray:
+        """Returns a list of numpy arrays. Each numpy array contains the rho information for an interatomic surface."""
+
         return np.hstack([ias.rho for ias in self.inter_atomic_surfaces.values()])
 
     @property
     def index(self) -> int:
+        """Returns the index of the atom of which the .iasviz file is read.
+
+        .. note::
+            This is 1-indexed as AIMAll uses 1 indices starts counting from 1.
+        """
         return int("".join(c for c in self.atom_name if c.isdigit()))
 
     def iso_density_surface_for_rho(self, rho_value: float) -> np.ndarray:
@@ -136,13 +163,18 @@ class IasViz:
         if color is None:
             return color_list[self.index - 1]
         elif "#" in color:
-            return [int(color.lstrip("#")[i : i + 2], 16) for i in (0, 2, 4)]
+            return [
+                val / 255
+                for val in [int(color.lstrip("#")[i : i + 2], 16) for i in (0, 2, 4)]
+            ]
         else:
             from PIL import ImageColor
 
-            return ImageColor.getrgb(color)
+            return [val / 255 for val in ImageColor.getrgb(str(color))]
 
     def parse(self):
+        """Reads the information from a .iasviz file into corresponding objects for ease of use."""
+
         with open(self.path, "r") as f:
             for line in f:
                 if line.startswith("<Atom>"):
@@ -253,12 +285,13 @@ def create_obj_points(coords, colors, define_normals=False):
     return obj
 
 
-def create_sphere_point(coords, color, radius):
-    obj = [COLOR]
-    obj.extend(color)
-    obj.append(SPHERE)
-    obj.extend(coords)
-    obj.append(radius)
+def create_critical_point(cp: CriticalPoint, name: str, color=str):
+    obj = cmd.pseudoatom(
+        pos=tuple(bohr_to_angstrom(cp.coordinates)),
+        object=name,
+        color=color,
+        label=round(cp.rho, 3),
+    )
     return obj
 
 
@@ -280,14 +313,13 @@ def create_obj_wrapper(coords, colors, meshtype="POINTS", define_normals=False):
 def qtaim_visualise_iasviz(
     selection="(all)",
     file=None,
-    color=None,
-    cp_color="green",
-    cp_radius=0.1,
-    transparency=0.0,
+    main_color=None,
     iso_rho=1e-3,
     ias_rho=None,
+    cp_color="green",
     meshtype="POINTS",
     define_normals=False,
+    transparency=0.0,
     *args,
     **kwargs,
 ):
@@ -298,27 +330,29 @@ def qtaim_visualise_iasviz(
         )
     pymol.color_list = []
     cmd.iterate(selection, "pymol.color_list.append(color)")
-    pymol.color_list = [cmd.get_color_tuple(color) for color in pymol.color_list]
+    pymol.color_list = [cmd.get_color_tuple(c) for c in pymol.color_list]
 
     iasviz = IasViz(file)
     # plotting critical points and creating a group for critical points only
     grouped_cps = f"{selection}_CPs"
     atom_cps = f"{iasviz.atom_name}_CPs_{selection}"
+    # Using pseudoatoms to create critical point spheres so that we can label them properly
     for i, cp in enumerate(iasviz.critical_points):
-        cp_sphere = create_sphere_point(
-            bohr_to_angstrom(cp.coordinates),
-            color=np.array(iasviz.get_color(cp_color, pymol.color_list)),
-            radius=float(cp_radius),
-        )
         if cp.type.value == "BCP":
             cp_name = f"{cp.type.value}_{iasviz.atom_name}_{'_'.join([val for val in cp.other_atoms])}_{selection}"
+            cp_sphere = create_critical_point(cp, cp_name, cp_color)
+            cmd.group(atom_cps, cp_name)
         else:
             cp_name = f"{cp.type.value}_{iasviz.atom_name}_{i}_{selection}"
-        cmd.load_cgo(cp_sphere, cp_name)
-        cmd.group(atom_cps, cp_name)
-    cmd.group(grouped_cps, atom_cps)
+            cp_sphere = create_critical_point(cp, cp_name, cp_color)
+            cmd.group(atom_cps, cp_name)
+        cmd.group(grouped_cps, atom_cps)
+    # Showing critical points as tiny spheres
+    cmd.show("spheres", grouped_cps)
+    cmd.set("sphere_scale", 0.1, grouped_cps)
+    # NOTE: critical points are pseudoatoms so you can use PyMol functionalities to change labels and colors.
     # Time to create the mesh object for the iasviz
-    point_color = np.array(iasviz.get_color(color, pymol.color_list))
+    point_color = np.array(iasviz.get_color(main_color, pymol.color_list))
     # Check if iso_rho is one of the three values available from aimall.iasviz output
 
     # Set ias_rho equal to iso_rho is its value is None
@@ -345,13 +379,23 @@ def qtaim_visualise_iasviz(
     grouped_name = f"{iasviz.atom_name}_iasviz_{selection}"
     cmd.group(grouped_name, f"{ias_name} {iso_surface_name}")
     cmd.group(f"{selection}_iasviz", grouped_name)
-    v = cmd.get_view()
     cmd.set("cgo_transparency", transparency, grouped_name)
     cmd.set("cgo_transparency", transparency, grouped_cps)
-    cmd.set_view(v)
 
 
-def qtaim_visualiser(selection="(all)", file=None, *args, **kwargs):
+def qtaim_visualiser(
+    selection="(all)",
+    file=None,
+    main_color=None,
+    iso_rho=1e-3,
+    ias_rho=None,
+    cp_color="green",
+    meshtype="POINTS",
+    define_normals=False,
+    transparency=0.0,
+    *args,
+    **kwargs,
+):
     file = Path(file)
 
     if file.is_dir():
@@ -360,7 +404,19 @@ def qtaim_visualiser(selection="(all)", file=None, *args, **kwargs):
         file = [file]
 
     for f in file:
-        qtaim_visualise_iasviz(selection, f, *args, **kwargs)
+        qtaim_visualise_iasviz(
+            selection,
+            f,
+            main_color=main_color,
+            iso_rho=iso_rho,
+            ias_rho=ias_rho,
+            cp_color=cp_color,
+            meshtype=meshtype,
+            define_normals=define_normals,
+            transparency=transparency,
+            *args,
+            **kwargs,
+        )
 
 
 cmd.extend("qtaim_visualiser", qtaim_visualiser)
