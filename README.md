@@ -23,6 +23,14 @@ You can install a python environment from the pymol python, and then add any rel
 
 That will give you access to pymol and its installed packages. After that you can just pip install whatever packages are needed (scipy, etc.). Then you can source the venv and run any of the scripts that import pymol without getting errors. Note that pymol comes with `python3.7`.
 
+In addition, if you want to call the script you have written directly from Pymol (i.e. adding it as a plugin or running it directly), you should update the `PYTHONPATH` environment variable.
+
+Doing 
+```
+export PYTHONPATH=$PYTHONPATH:~/.venv/pymol/lib/python3.7/site-packages
+```
+will make any packages installed in the venv environment available to Pymol. You have the option to either add this to your `.bashrc` file, or just add it directly to the current terminal from which you will launch Pymol.
+
 ## Variables
 
 The variables to the main `qtaim_visualiser` functions are:
