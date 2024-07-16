@@ -15,6 +15,12 @@ Otherwise, simply type
 
 _Note_: To properly run the script you will need an initial object (e.g. xyz file of the geometry on which AIMAll was run) and the corresponding `_atomicfiles_` folder output from an AIMAll calculation with `-iaswrite=true`. The files output from AIMAll for visualisation are named `.iasviz`. The only files that can be actually visualised are the ones obtained with the `-bim=proaim` parameters (i.e. basin integration method : ProAIM).
 
+You can install a python environment from the pymol python, and then add any relevant packages. So you can do
+
+....path_to_pymol/bin/python -m venv ~/.venv/pymol --system-site-packages
+
+That will give you access to pymol and its installed packages. After that you can just pip install whatever packages are needed (scipy, etc.). Then you can source the venv and run any of the scripts that import pymol without getting errors. Note that pymol comes with `python3.7`.
+
 ## Variables
 
 The variables to the main `qtaim_visualiser` functions are:
