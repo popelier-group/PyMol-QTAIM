@@ -17,7 +17,9 @@ _Note_: To properly run the script you will need an initial object (e.g. xyz fil
 
 You can install a python environment from the pymol python, and then add any relevant packages. So you can do
 
+```
 ....path_to_pymol/bin/python -m venv ~/.venv/pymol --system-site-packages
+```
 
 That will give you access to pymol and its installed packages. After that you can just pip install whatever packages are needed (scipy, etc.). Then you can source the venv and run any of the scripts that import pymol without getting errors. Note that pymol comes with `python3.7`.
 
